@@ -2,40 +2,51 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <link href="/style.css" rel="stylesheet"/>
+    <link href="/style.css" rel="stylesheet" />
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+    <!--Хедер-->
     <header class="page_header">
+      <!--Навигация / верхняя панель-->
       <nav class="navigation">
         <ul class="navigation_list">
-          <li><img class="logo_header" src="#" /></li>
+          <!--Логотип-->
+          <li><img class="logo_header" src="/img/logo.svg"/></li>
           <li class="navigation_item">
-            <a class="navigation_link_current" href="#">Главная</a>
+          <!--Переход на главную-->
+            <a class="navigation_link_current" href="/index.html">Главная</a>
           </li>
+          <!--Переход в раздел о себе-->
           <li class="navigation_item">
             <a class="navigation_link" href="#">О Седоне</a>
           </li>
+          <!--Переход в каталог гостиниц-->
           <li class="navigation_item">
-            <a class="navigation_link" href="#">Гостиницы</a>
+            <a class="navigation_link" href="/catalog.html">Гостиницы</a>
           </li>
         </ul>
+        <!--Поиск-->
         <ul class="navigation_list user_navigation">
           <li class="navigation_item">
-            <a class="navigation_link" href="#" src=""
-              ><span class="visually-hidden">Поиск</span></a>
+            <a class="navigation_link" href="#" src="">
+              <span class="visually-hidden">Поиск</span></a>
           </li>
+          <!--Поставить лайк-->
           <li class="navigation_item">
-            <a class="navigation_link" href="#" src=""
-              ><span class="visually-hidden">Лайк</span></a>
+            <a class="navigation_link" href="#" src="">
+              <span class="visually-hidden">Лайк</span></a>
           </li>
+          <!--Скорее всего переход в каталог-->
           <li class="navigation_item">
-            <a class="navigation_link" href="#" src=""
-              ><span class="visually-hidden">Хочу сюда</span></a>
+            <a class="navigation_link" href="#" src="">
+              <span class="visually-hidden">Хочу сюда</span></a>
           </li>
         </ul>
       </nav>
     </header>
+
+    <!--Основное содержаение-->
     <main class="main_index">
       <h1 class="visually_hiden">Добро пожаловать в Седону</h1>
       <img class="background_image_logo" src="#" alt="mountains" />
@@ -50,6 +61,7 @@
           Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
         </p>
       </section>
+      <!--Приемущества-->
       <section class="advantages">
         <h2 class="visually_hiden"></h2>
         <ol class="advantages_list">
@@ -60,24 +72,28 @@
               туристов, там течёт своя жизнь
             </p>
           </li>
+
           <li class="advantages_item">
             <h3 class="advantages_title">Небольшая площадь</h3>
             <p class="advantages_description">
               Все достопримечательности находятся очень близко
             </p>
           </li>
+
           <li class="advantages_item">
             <h3 class="advantages_title">Красивая дорога</h3>
             <p class="advantages_description">
               Ехать в Седону из Лас-Вегаса совсем не скучно!
             </p>
           </li>
+
           <li class="advantages_item">
             <h3 class="advantages_title">Мало туристов</h3>
             <p class="advantages_description">
               Большинство едет в Гранд Каньон и толпится там
             </p>
           </li>
+
           <li class="advantages_item">
             <h3 class="advantages_title">Там есть мост дьявола</h3>
             <p class="advantages_description">
@@ -86,9 +102,11 @@
           </li>
         </ol>
       </section>
-      <section class="features">
+
+      <!--Сервис / обслуживание-->
+      <section class="services">
         <h3 class="">Приезжайте в Седону отдохнуть в комфорте и уюте!</h3>
-        <p class="features_description"></p>
+        <p class="sercices_description"></p>
       </section>
       <section class="services">
         <ul class="services_list">
@@ -118,22 +136,44 @@
           </li>
         </ul>
       </section>
+
+      <!--Предложение выбора-->
       <section class="appointment">
         <h2 class="appointment-title">Заинтересовались</h2>
-        <p class="appointment_description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="button button-all_hotel" href="#">Посмотреть гостиницы в седоне</a>
+        <p class="appointment_description">
+          Укажите предполагаемые даты поездки, и мы покажем вам лучшие
+          предложения гостиниц в Седоне
+        </p>
+        <a class="button button-all_hotel" href="#">Посмотреть гостиницы в
+          седоне</a>
       </section>
+
+      <!--Рассылка-->
       <section class="newsletter">
         <h2 class="page-footer-title">Получайте лучшие предложения</h2>
-        <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
-            <button class="button newsletter-button" type="submit">
-              <span class="visually-hidden">Подписать</span>
-            </button>
-          </form>
-        </section>
+        <form
+          class="newsletter-form"
+          action="https://echo.htmlacademy.ru/"
+          method="post">
+          <input
+            class="field"
+            placeholder="Ваш e-mail"
+            type="email"
+            name="newsletter-email"
+            id="newsletter-email"
+            required
+            />
+          <button class="button newsletter-button" type="submit">
+            <span class="visually-hidden">Подписать</span>
+          </button>
+        </form>
+      </section>
     </main>
+
+    <!--Футер-->
     <footer class="page-footer">
+
+      <!--Соц. сети-->
       <section class="footer-social">
         <ul class="footer-social-list">
           <li class="footer-social-item">
@@ -153,14 +193,22 @@
           </li>
         </ul>
       </section>
-        <section class="footer_contacts">
+
+      <!--Контакты-->
+      <section class="footer_contacts">
         <address class="footer-contacts-address">
-          <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          <a class="footer-contacts-address-phone" href="tel:+78128121212">
+            +7 (812) 812-12-12</a>
         </address>
       </section>
-    <section class="footer_logo">
-      <a class="footer_logo_img" href="https://htmlacademy.ru/"><img src="" alt="Логотип"><span class="visually_hiden">HTML Axademy</span></a>
-    </section>
+
+      <!--Лого ссылка на академию-->
+      <section class="footer_logo">
+        <a class="footer_logo_img" href="https://htmlacademy.ru/">
+          <img src="" alt="Логотип" />
+          <span class="visually_hiden">HTML Academy</span>
+        </a>
+      </section>
     </footer>
   </body>
 </html>
