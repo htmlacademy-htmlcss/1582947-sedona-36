@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
+    <link href="/style/style.css" rel="stylesheet" />
     <title>Каталог гостиниц</title>
   </head>
 
@@ -13,7 +14,10 @@
       <nav class="navigation">
         <ul class="navigation_list">
           <!--Логотип-->
-          <li><img class="logo_header" src="/img/logo.svg"/></li>
+          <a class="logo" href="/index.html">
+            <img class="logo_header" src="/images/logo.svg" width="140" height="70,05px"
+              alt="Логотип и переход на главную страницу">
+          </a>
           <li class="navigation_item">
             <!--Переход на главную-->
             <a class="navigation_link_current" href="/index.html">Главная</a>
@@ -31,11 +35,13 @@
         <ul class="navigation_list user_navigation">
           <li class="navigation_item">
             <a class="navigation_link" href="#" src="">
+              <img src="/images/search.svg" alt="Кнопка поиска" width="18" height="18">
               <span class="visually-hidden">Поиск</span></a>
           </li>
           <!--Поставить лайк-->
           <li class="navigation_item">
             <a class="navigation_link" href="#" src="">
+              <img src="/images/heart.svg" alt="Понравилось" width="18" height="17">
               <span class="visually-hidden">Лайк</span></a>
           </li>
           <!--Скорее всего переход в каталог-->
@@ -49,20 +55,21 @@
 
     <!--Основное содержаение-->
     <main class="main_inner">
-
+      <img src="/images/catalog-background.jpeg" alt="Фоновая картинка фильтров" width="1200" height="412">
       <!--Путь по страницам-->
       <header class="inner-header">
         <h1 class="inner_header_title">Каталог</h1>
-        <ul class="breadcrumbs">
+        <ol class="breadcrumbs">
           <li class="breadcrumbs_item">
-            <a class="breadcrumbs_link" href="">
-              <img src="" alt="">
+            <a class="breadcrumbs_link" href="/index.html">
+              <img src="/images/breadcrumbs-home.svg" alt="Вернуться на главную
+                страницу" width="12px" height="12px">
             </a>
           </li>
           <li class="breadcrumbs_item">
-            <a class="breadcrumbs_link" href="">Гостинцы</a>
+            <a class="breadcrumbs_link" href="">Гостиницы</a>
           </li>
-        </ul>
+        </ol>
       </header>
 
       <!--Фильтры-->
@@ -70,23 +77,20 @@
         <h2 class="visually-hidden">Список товаров с фильтрами</h2>
 
         <!--Форма-->
-        <form class="catalog-filter" action="https://echo.htmlacademy.ru/"
-          method="get">
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <!--Фильтр по чекбоксам-->
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Инфроструктура:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox"
-                    name="swimming_pool" checked>
+                  <input class="control-input" type="checkbox" name="swimming_pool" checked>
                   Бассейн
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox"
-                  name="parking" checked>
+                  <input class="control-input" type="checkbox" name="parking" checked>
                   Парковка
                 </label>
               </li>
@@ -128,12 +132,12 @@
             <ul>
               <li class="catalog_range_price_item">
                 <ul class="value_price_list">
-                <!--Необходимо понять как еще засунуть сюда от и до-->
-                <input class="value_price_item" type="text" placeholder="0">
-                <input class="value_price_item" type="text" placeholder="9000">
-              </ul>
-                <input class="range" type="range" min="0" max="9000" step="1"
-                  value="6000"> <!--Понять как передлать на 2 ползунка-->
+                  <!--Необходимо понять как еще засунуть сюда от и до-->
+                  <input class="value_price_item" type="text" placeholder="0">
+                  <input class="value_price_item" type="text" placeholder="9000">
+                </ul>
+                <input class="range" type="range" min="0" max="9000" step="1" value="6000">
+                <!--Понять как передлать на 2 ползунка-->
               </li>
             </ul>
           </fieldset>
@@ -149,108 +153,141 @@
         </select>
         <!--Смена вида отображения каталога-->
         <a class="button" href="#">
-          <span class="visually-hidden">Показать карточки</span>
+          <img src="/images/view-cards.svg" alt="Показать товары в виде карточек" width="16px" heght="14px">
+          <span class="visually-hidden">Показать товары в виде карточек</span>
         </a>
         <a href="#" class="button button-light">
-          <span class="visually-hidden"></span><!--Не понятно как назывется данное отображение-->
+          <img src="/images/view-all.svg" alt="Показать с полными описанием" width="16px" heght="14px">
+          <span class="visually-hidden">Показать с полными
+            описанием</span><!--Не понятно как назывется данное отображение-->
         </a>
         <a href="#" class="button button-light">
-          <span class="visually-hidden">Показать список</span>
+          <img src="/images/view-list.svg" alt="Показать товары в виде списка" width="16px" heght="14px">
+          <span class="visually-hidden">Показать товары в виде списка</span>
         </a>
         <!--Карточки товара-->
         <ul class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="">
+              <img class="product-card-image" src="/images/catalog-item/hotel-1.jpg" alt="Гостиница Amara
+                Resort & Spa" width="300" height="212">
               <h3 class="product-card-title">Amara Resort & Spa</h3>
             </a>
             <ul class="product_card_info">
-              <li><p class="product_type">Гостиница</p>
+              <li>
+                <p class="product_type">Гостиница</p>
               </li>
-              <li><p class="product-card-price">От 4000 ₽</p>
+              <li>
+                <p class="product-card-price">От 4000 ₽</p>
               </li>
             </ul>
             <ul class="button_card">
-              <li class="button_card_item"><a class="button button_brown"
-                  href="#">Подробнее</a></li>
-              <li class="button_card_item"><a class="button button_blue"
-                  href="#">В избранное</a></li>
+              <li class="button_card_item"><a class="button button_brown" href="#">Подробнее</a></li>
+              <li class="button_card_item"><a class="button button_blue" href="#">В избранное</a></li>
             </ul>
             <ul class="raiting">
-              <li class="stars_raiting"></li><!--Как отобразить в HTML не знаю-->
-              <li class="overall_rating"><p>Рейтинг: 8,5</p></li>
+              <li class="stars_raiting">
+                <img src="/images/star-rating.svg" alt="Рейтинг" width="18px" heght="17px">
+                <img src="/images/star-rating.svg" alt="Рейтинг" width="18px" heght="17px">
+                <img src="/images/star-rating.svg" alt="Рейтинг" width="18px" heght="17px">
+                <img src="/images/star-rating.svg" alt="Рейтинг" width="18px" heght="17px">
+              </li>
+              <li class="overall_rating">
+                <p>Рейтинг: 8,5</p>
+              </li>
             </ul>
           </li>
 
 
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="">
+              <img class="product-card-image" src="/images/catalog-item/hotel-2.jpg"
+                alt="Гостиница Villas atPoco Diablo" width="300" height="212">
               <h3 class="product-card-title">Villas at Poco Diablo</h3>
             </a>
             <ul class="product_card_info">
-              <li><p class="product_type">Гостиница</p>
+              <li>
+                <p class="product_type">Гостиница</p>
               </li>
-              <li><p class="product-card-price">От 5000 ₽</p>
+              <li>
+                <p class="product-card-price">От 5000 ₽</p>
               </li>
             </ul>
             <ul class="button_card">
-              <li class="button_card_item"><a class="button button_brown"
-                  href="#">Подробнее</a></li>
-              <li class="button_card_item"><a class="button button_blue"
-                  href="#">В избранное</a></li>
+              <li class="button_card_item"><a class="button button_brown" href="#">Подробнее</a></li>
+              <li class="button_card_item"><a class="button button_blue" href="#">В избранное</a></li>
             </ul>
             <ul class="raiting">
-              <li class="stars_raiting"></li><!--Как отобразить в HTML не знаю-->
-              <li class="overall_rating"><p>Рейтинг: 9,2</p></li>
+              <li class="stars_raiting">
+                <img src="/images/star-rating.svg" alt="Рейтинг" width="18px" heght="17px">
+                <img src="/images/star-rating.svg" alt="Рейтинг" width="18px" heght="17px">
+                <img src="/images/star-rating.svg" alt="Рейтинг" width="18px" heght="17px">
+                <img src="/images/star-rating.svg" alt="Рейтинг" width="18px" heght="17px">
+              </li>
+              <li class="overall_rating">
+                <p>Рейтинг: 9,2</p>
+              </li>
             </ul>
           </li>
 
 
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="">
+              <img class="product-card-image" src="/images/catalog-item/hotel-3.jpg" alt="Гостиница DesertQuail Inn"
+                width="300" height="212">
               <h3 class="product-card-title">Desert Quail Inn</h3>
             </a>
             <ul class="product_card_info">
-              <li><p class="product_type">Гостиница</p>
+              <li>
+                <p class="product_type">Гостиница</p>
               </li>
-              <li><p class="product-card-price">От 2500 ₽</p>
+              <li>
+                <p class="product-card-price">От 2500 ₽</p>
               </li>
             </ul>
             <ul class="button_card">
-              <li class="button_card_item"><a class="button button_brown"
-                  href="#">Подробнее</a></li>
-              <li class="button_card_item"><a class="button button_blue"
-                  href="#">В избранное</a></li>
+              <li class="button_card_item"><a class="button button_brown" href="#">Подробнее</a></li>
+              <li class="button_card_item"><a class="button button_blue" href="#">В избранное</a></li>
             </ul>
             <ul class="raiting">
-              <li class="stars_raiting"></li><!--Как отобразить в HTML не знаю-->
-              <li class="overall_rating"><p>Рейтинг: 6,2</p></li>
+              <li class="stars_raiting">
+                <img src="/images/star-rating.svg" alt="Рейтинг" width="18px" heght="17px">
+                <img src="/images/star-rating.svg" alt="Рейтинг" width="18px" heght="17px">
+                <img src="/images/star-rating.svg" alt="Рейтинг" width="18px" heght="17px">
+              </li>
+              <li class="overall_rating">
+                <p>Рейтинг: 6,2</p>
+              </li>
             </ul>
           </li>
 
 
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="">
+              <img class="product-card-image" src="/images/catalog-item/hotel-4.jpg" alt="Гостиница GreenTree Inn"
+                width="300" height="212">
               <h3 class="product-card-title">GreenTree Inn</h3>
             </a>
             <ul class="product_card_info">
-              <li><p class="product_type">Гостиница</p>
+              <li>
+                <p class="product_type">Гостиница</p>
               </li>
-              <li><p class="product-card-price">От 1500 ₽</p>
+              <li>
+                <p class="product-card-price">От 1500 ₽</p>
               </li>
             </ul>
             <ul class="button_card">
-              <li class="button_card_item"><a class="button button_brown"
-                  href="#">Подробнее</a></li>
-              <li class="button_card_item"><a class="button button_blue"
-                  href="#">В избранное</a></li>
+              <li class="button_card_item"><a class="button button_brown" href="#">Подробнее</a></li>
+              <li class="button_card_item"><a class="button button_blue" href="#">В избранное</a></li>
             </ul>
             <ul class="raiting">
-              <li class="stars_raiting"></li><!--Как отобразить в HTML не знаю-->
-              <li class="overall_rating"><p>Рейтинг: 5,0</p></li>
+              <li class="stars_raiting">
+                <img src="/images/star-rating.svg" alt="Рейтинг" width="18px" heght="17px">
+                <img src="/images/star-rating.svg" alt="Рейтинг" width="18px" heght="17px">
+              </li>
+              <li class="overall_rating">
+                <p>Рейтинг: 5,0</p>
+              </li>
             </ul>
           </li>
         </ul>
@@ -277,6 +314,7 @@
         </ul>
       </section>
     </main>
+
     <!--Футер-->
     <footer class="page-footer">
 
@@ -285,17 +323,21 @@
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="button" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">ВКонтакте</span>
+              <img src="/images/social-vk.svg" alt="ВК">
+              <span class="visually-hidden">Ссылка на ВКонтакте</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="https://t.me/htmlacademy ">
-              <span class="visually-hidden">Твиттер</span>
+            <a class="button" href="https://t.me/htmlacademy">
+              <img src="/images/social-telegram.svg" alt="Телеграмм">
+              <span class="visually-hidden">Ссылка на Телеграм
+              </span>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Ютюб</span>
+              <img src="/images/social-youtube.svg" alt="Ютюб">
+              <span class="visually-hidden">Ссылка на Ютюб</span>
             </a>
           </li>
         </ul>
@@ -312,10 +354,11 @@
       <!--Лого ссылка на академию-->
       <section class="footer_logo">
         <a class="footer_logo_img" href="https://htmlacademy.ru/">
-          <img src="" alt="Логотип" />
-          <span class="visually_hidden">HTML Academy</span>
+          <img src="/images/HTML Academy.svg" alt="Логотип" width="114.9" height="32.9" />
+          <span class="visually_hidden">Ссылка на HTML Academy</span>
         </a>
       </section>
     </footer>
   </body>
+
 </html>

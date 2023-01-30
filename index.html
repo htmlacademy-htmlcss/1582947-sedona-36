@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8" />
-    <link href="/style.css" rel="stylesheet" />
+    <link href="/style/style.css" rel="stylesheet" />
     <title>HTML Academy: Седона</title>
   </head>
+
   <body>
     <!--Хедер-->
     <header class="page_header">
       <!--Навигация / верхняя панель-->
-      <nav class="navigation">
-        <ul class="navigation_list">
-          <!--Логотип-->
-          <li><img class="logo_header" src="/img/logo.svg"/></li>
-          <li class="navigation_item">
-          <!--Переход на главную-->
-            <a class="navigation_link_current" href="/index.html">Главная</a>
-          </li>
-          <!--Переход в раздел о себе-->
-          <li class="navigation_item">
-            <a class="navigation_link" href="#">О Седоне</a>
-          </li>
-          <!--Переход в каталог гостиниц-->
-          <li class="navigation_item">
-            <a class="navigation_link" href="/catalog.html">Гостиницы</a>
-          </li>
-        </ul>
-        <!--Поиск-->
-        <ul class="navigation_list user_navigation">
-          <li class="navigation_item">
-            <a class="navigation_link" href="#" src="">
-              <span class="visually-hidden">Поиск</span></a>
-          </li>
-          <!--Поставить лайк-->
-          <li class="navigation_item">
-            <a class="navigation_link" href="#" src="">
-              <span class="visually-hidden">Лайк</span></a>
-          </li>
-          <!--Скорее всего переход в каталог-->
-          <li class="navigation_item">
-            <a class="navigation_link" href="#" src="">
-              <span class="visually-hidden">Хочу сюда</span></a>
-          </li>
-        </ul>
+      <a class="logo" href="/index.html">
+        <img class="logo_header" src="/images/logo.svg" width="140" height="70,05"
+          alt="Логотип и переход на главную страницу">
+      </a>
+      <ul class="navigation_list">
+
+        <!--Переход на главную-->
+        <a class="navigation_link_current" href="/index.html">Главная</a>
+        </li>
+        <!--Переход в раздел о себе-->
+        <li class="navigation_item">
+          <a class="navigation_link" href="#">О Седоне</a>
+        </li>
+        <!--Переход в каталог гостиниц-->
+        <li class="navigation_item">
+          <a class="navigation_link" href="/catalog.html">Гостиницы</a>
+        </li>
+      </ul>
+      <!--Поиск-->
+      <ul class="navigation_list user_navigation">
+        <li class="navigation_item">
+          <a class="navigation_link" href="#" src="">
+            <span class="visually-hidden">Поиск</span></a>
+        </li>
+        <!--Поставить лайк-->
+        <li class="navigation_item">
+          <a class="navigation_link" href="#" src="">
+            <span class="visually-hidden">Лайк</span></a>
+        </li>
+        <!--Скорее всего переход в каталог-->
+        <li class="navigation_item">
+          <a class="navigation_link" href="#" src="">
+            <span class="visually-hidden">Хочу сюда</span></a>
+        </li>
+      </ul>
       </nav>
     </header>
 
     <!--Основное содержаение-->
     <main class="main_index">
       <h1 class="visually_hidden">Добро пожаловать в Седону</h1>
-      <img class="background_image_logo" src="#" alt="mountains" />
-      <img class="logo" src="#" alt="welcome_sedona" />
-      <img class="divider_logo" src="#" alt="divider" />
+      <img class="background_image_logo" src="/images/index-background.jpg" alt="mountains" width="1200" height="485" />
+      <img class="logo" src="/images/welcome.svg" alt="welcome_sedona" width="458" height="352" />
+      <img class="divider_logo" src="/images/divider.svg" alt="divider" width="1200" height="57" />
       <section class="info_page">
         <h3 class="info_title">
           Седона — небольшой городок в Аризоне,<br />
@@ -72,7 +75,10 @@
               туристов, там течёт своя жизнь
             </p>
           </li>
-
+          <li class="advantages_item">
+            <h3 class="advantages_title">Фото</h3>
+            <img src="/images/photo-1.jpg" alt="Фото из седоны" width="800" height="384">
+          </li>
           <li class="advantages_item">
             <h3 class="advantages_title">Небольшая площадь</h3>
             <p class="advantages_description">
@@ -93,7 +99,10 @@
               Большинство едет в Гранд Каньон и толпится там
             </p>
           </li>
-
+          <li class="advantages_item">
+            <h3 class="advantages_title">Фото</h3>
+            <img src="/images/photo-2.jpg" alt="Фото из седоны" width="800" height="385">
+          </li>
           <li class="advantages_item">
             <h3 class="advantages_title">Там есть мост дьявола</h3>
             <p class="advantages_description">
@@ -111,7 +120,8 @@
       <section class="services">
         <ul class="services_list">
           <li class="services_item">
-            <h3 class="services_title">Жильё</h3>
+            <img src="/images/Home.svg" alt="Жилье" width="75" height="72">
+            <h3 class="services_title">Иконка жильё</h3>
             <p class="services_description">
               Рекомендуем пожить<br />
               в настоящем мотеле,<br />
@@ -119,7 +129,8 @@
             </p>
           </li>
           <li class="services_item">
-            <h3 class="services_title">Еда</h3>
+            <img src="/images/food.svg" alt="Еда" width="74" height="70">
+            <h3 class="services_title">Иконка еда</h3>
             <p class="services_description">
               Всегда заказывайте<br />
               топовый фирменный бургер,<br />
@@ -127,7 +138,8 @@
             </p>
           </li>
           <li class="services_item">
-            <h3 class="services_title">Сувениры</h3>
+            <img src="/images/Box.svg" alt="Сувениры" width="64" height="76">
+            <h3 class="services_title">Иконка сувениры</h3>
             <p class="services_description">
               Не только китайского,<br />
               но и настоящего местного<br />
@@ -149,22 +161,13 @@
       </section>
 
       <!--Рассылка-->
-      <section class="newsletter">
+      <section> class="newsletter">
         <h2 class="page-footer-title">Получайте лучшие предложения</h2>
-        <form
-          class="newsletter-form"
-          action="https://echo.htmlacademy.ru/"
-          method="post">
-          <input
-            class="field"
-            placeholder="Ваш e-mail"
-            type="email"
-            name="newsletter-email"
-            id="newsletter-email"
-            required
-            />
+        <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+          <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email"
+            required />
           <button class="button newsletter-button" type="submit">
-            <span class="visually-hidden">Подписать</span>
+            <span class="visually-hidden">Подписаться</span>
           </button>
         </form>
       </section>
@@ -178,17 +181,21 @@
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="button" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">ВКонтакте</span>
+              <img src="/images/social-vk.svg" alt="ВК">
+              <span class="visually-hidden">Ссылка на ВКонтакте</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="https://t.me/htmlacademy ">
-              <span class="visually-hidden">Твиттер</span>
+            <a class="button" href="https://t.me/htmlacademy">
+              <img src="/images/social-telegram.svg" alt="Телеграмм">
+              <span class="visually-hidden">Ссылка на Телеграм
+              </span>
             </a>
           </li>
           <li class="footer-social-item">
             <a class="button" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Ютюб</span>
+              <img src="/images/social-youtube.svg" alt="Ютюб">
+              <span class="visually-hidden">Ссылка на Ютюб</span>
             </a>
           </li>
         </ul>
@@ -205,8 +212,8 @@
       <!--Лого ссылка на академию-->
       <section class="footer_logo">
         <a class="footer_logo_img" href="https://htmlacademy.ru/">
-          <img src="" alt="Логотип" />
-          <span class="visually_hidden">HTML Academy</span>
+          <img src="/images/HTML Academy.svg" alt="Логотип" width="114.9" height="32.9"/>
+          <span class="visually_hidden">Ссылка на HTML Academy</span>
         </a>
       </section>
     </footer>
