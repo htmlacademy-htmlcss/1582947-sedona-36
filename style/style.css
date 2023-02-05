@@ -27,3 +27,170 @@
   src: url(../fonts/ptsans-700.woff2) format("woff2");
   font-display: swap;
 }
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: black;
+  background-color: rgb(77, 77, 77);
+  width: 1200px;
+}
+.visually_hidden {
+  display: none;
+}
+
+.logo {
+  margin-left: 70px;
+}
+
+.page_header {
+  color: black;
+  background-color: white;
+  display: flex;
+}
+.navigation_list {
+  display: flex;
+  list-style-type: none;
+  margin-right: 32px;
+}
+
+.navigation_link {
+  margin-right: 32px;
+  text-decoration: none;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: black;
+}
+
+.user_navigation {
+  margin-right: 70px;
+}
+
+.hero_block {
+  background-image: url(/images/index-background.jpg);
+  background-color: white;
+  background-size: 1200px 485px;
+  color: black;
+  background-repeat: no-repeat;
+}
+
+.advantages_list {
+  list-style-type: none;
+  text-align: center;
+}
+.advantages-item {
+  width: 400px;
+  height: 385px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.advantages-title {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advantages_description {
+  font-size: 18px;
+}
+.services_info {
+  text-align: center;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.services_info_title {
+  font-family: "PT Sans";
+  text-transform: uppercase;
+}
+
+.sercices_description_info {
+  text-transform: none;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.services_item {
+  list-style-type: none;
+  text-align: center;
+}
+
+.services_title {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.services_description {
+  text-transform: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.appointment {
+}
+
+.appointment-title {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.appointment_description {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.newsletter {
+  background-image: url(/images/catalog-background.jpeg);
+  width: 1200px;
+  height: 408px;
+  text-align: center;
+}
+
+.newsletter_title {
+  margin-top: 96px;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.newsletter_description {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
