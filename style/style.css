@@ -63,7 +63,6 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  text-transform: capitalize;
   color: black;
 }
 
@@ -169,7 +168,8 @@ body {
   text-align: center;
 }
 
-.newsletter {
+.newsletter,
+.inner-header {
   background-image: url(/images/catalog-background.jpeg);
   width: 1200px;
   height: 408px;
@@ -187,10 +187,37 @@ body {
 }
 
 .newsletter_description {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
 }
+.inner-header {
+  display: flex;
 
+}
+.inner-header{
+  color: white;
+}
+
+.inner_header_title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs {
+}
+
+
+.product-card {
+  width: 340px;
+  height: 438px;
+}
+.product-card-link,
+.button.button_brown,
+.button.button_blue {
+  text-decoration: none;
+  color: black;
+}
