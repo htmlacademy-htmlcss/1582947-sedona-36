@@ -33,14 +33,16 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: black;
-  background-color:white;
+  background-color: white;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+html {
+  height: 100%;
 }
 
 .visually_hidden {
@@ -49,24 +51,45 @@ body {
 
 .logo {
   margin-left: 70px;
+  z-index: 1;
+  width: 140px;
 }
 
 .page_header {
   color: black;
   background-color: white;
   display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.navigation_list {
-  display: flex;
-  list-style-type: none;
-  margin-right: 32px;
+  height: 64px;
 }
 
-.navigation_link,
-.footer-contacts-address-phone
- {
+.page-header-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1200px;
+}
+.navigation_list {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin-left: 70px;
+}
+
+.navigation_list.user_navigation {
+  margin-right: 70px;
+}
+
+.navigation_item {
+  list-style-type: none;
+}
+
+.navigation_link {
   margin-right: 32px;
   text-decoration: none;
   font-family: "PT Sans";
@@ -75,8 +98,14 @@ body {
   font-size: 20px;
   line-height: 24px;
   color: black;
+  margin: 0;
+  display: inline-block;
+  padding: 20px 16px;
 }
 
+.main-container {
+  flex-grow: 1;
+}
 .user_navigation {
   margin-right: 70px;
 }
@@ -92,13 +121,25 @@ body {
 }
 
 .logo_welcome {
-  display: inline-block;
-  width: 100%;
+  display: block;
+  width: auto;
 }
 
-.hero-divider{
+.hero-divider {
   position: absolute;
   bottom: 0;
+}
+.info-container {
+  width: 1200px;
+  height: 261px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  left: 0;
+  top: 485px;
+  margin-bottom: 21px;
 }
 
 .info_title {
@@ -109,32 +150,88 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
+.info_description {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
 .advantages_list {
   list-style-type: none;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;
 }
-.advantages-item {
+.advantages_item.photo {
+  width: 800px;
+}
+.advantages_item {
   width: 400px;
   height: 385px;
   list-style-type: none;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  justify-content: center;
+}
+.advantages_list li:first-child,
+.advantages_list li:last-child {
+  background-color: #82b3d3;
 }
 
-.advantages-title {
+.advantages_list li:nth-child(3),
+.advantages_list li:nth-child(5) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages_list li:nth-child(4) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages_title {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
+.rectangle {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.rectangle.white {
+  background: rgba(255, 255, 255, 0.3);
+}
+.rectangle.gray {
+  background: rgba(0, 0, 0, 0.3);
+}
 .advantages_description {
   font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #333333;
 }
+
 .services_info {
   text-align: center;
   font-family: "PT Sans";
@@ -143,11 +240,14 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  height: 246px;
 }
 
 .services_info_title {
   font-family: "PT Sans";
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .sercices_description_info {
@@ -157,13 +257,39 @@ body {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services_list {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .services_item {
   list-style-type: none;
   text-align: center;
+  width: 400px;
+  height: 385px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  justify-content: center;
 }
-
+.services_icon {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
 .services_title {
   font-family: "PT Sans";
   font-style: normal;
@@ -171,16 +297,23 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
+
 .services_description {
   text-transform: none;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .appointment {
+  height: 406px;
+  text-align: center;
 }
 
 .appointment-title {
@@ -189,7 +322,6 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  text-align: center;
   text-transform: uppercase;
 }
 .appointment_description {
@@ -198,33 +330,35 @@ body {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  text-align: center;
 }
 
-.newsletter,
+.subscription,
 .inner-header {
   background-image: url(/images/catalog-background.jpeg);
   width: 1200px;
   height: 408px;
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
-.newsletter_title {
-  margin-top: 96px;
+.subscription_title {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
 }
 
-.newsletter_description {
+.subscription_description {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+  margin: 0;
 }
 .inner-header {
   display: flex;
@@ -252,20 +386,142 @@ body {
   text-decoration: none;
   color: black;
 }
+.page-footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1060px;
+  margin: 0 auto;
+}
 
+.footer-social-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  max-width: 142px;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.main_inner,
 .page-footer {
+  display: flex;
+  flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-footer,
-.footer-social ul,
-.footer_contacts,
-.footer_logo
-{
+.filter {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
 }
-.footer-social-list {
-list-style-type: none;
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: flex-start;
+  padding: 0;
+  gap: 10px;
+  width: 114px;
+  height: 21px;
+}
+
+.catalog-filter {
+  display: flex;
+  width: 1060px;
+  height: 160px;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+.catalog-filter-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.sort {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort-page {
+  display: flex;
+}
+
+.search_result {
+  margin-right: 200px;
+}
+
+.select-control {
+  margin-right: 70px;
+}
+
+.main-page-catalog {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+.product-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 16px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  width: 340px;
+  height: 438px;
+  align-items: stretch;
+}
+
+.product-card-title {
+  padding: 16px 16px 0 16px;
+  margin: 0;
+}
+.product-card-image {
+  padding: 16px 16px 0 16px;
+}
+
+.product_card_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 16px 16px 0 16px;
+  margin: 0;
+}
+
+.button_card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 16px 16px 0 16px;
+  margin: 0;
+}
+
+.raiting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 16px 16px 0 16px;
+  margin: 0;
+  align-items: center;
 }
