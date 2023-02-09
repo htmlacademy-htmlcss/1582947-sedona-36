@@ -45,8 +45,8 @@
             </li>
             <!--Скорее всего переход в каталог-->
             <li class="navigation_item">
-              <a class="navigation_link button" href="#">Хочу сюда
-                <span class="visually_hidden">Хочу сюда</span></a>
+              <a class="navigation_link button" href="#">Хочу сюда!
+                <span class="visually_hidden">Хочу сюда!</span></a>
             </li>
           </ul>
         </nav>
@@ -147,30 +147,34 @@
       </header>
 
       <section class="sort">
-        <div class="sort-page">
-          <h2 class="search_result">Найдено гостиниц: 38</h2>
-          <!--Сортировка из выпадающего списка-->
-          <select class="select-control" aria-label="Сортировка">
-            <option value="popular">Сначала популярное</option>
-            <option value="cheap">Сначала дешёвое</option>
-            <option value="expensive">Сначала дорогое</option>
-          </select>
-          <!--Смена вида отображения каталога-->
-          <div class="view-container">
+        <h2 class="search_result">Найдено гостиниц: 38</h2>
+        <!--Сортировка из выпадающего списка-->
+        <select class="select-control" aria-label="Сортировка">
+          <option value="popular">Сначала популярное</option>
+          <option value="cheap">Сначала дешёвое</option>
+          <option value="expensive">Сначала дорогое</option>
+        </select>
+        <!--Смена вида отображения каталога-->
+        <div class="view-container">
+          <ul class="view-list">
             <a class="button" href="#">
               <img src="/images/view-cards.svg" alt="Показать товары в виде карточек" width="16" height="14">
               <span class="visually_hidden">Показать товары в виде карточек</span>
             </a>
-            <a href="#" class="button button-light">
-              <img src="/images/view-all.svg" alt="Показать с полными описанием" width="16" height="14">
-              <span class="visually_hidden">Показать с полными
-                описанием</span><!--Не понятно как назывется данное отображение-->
-            </a>
-            <a href="#" class="button button-light">
-              <img src="/images/view-list.svg" alt="Показать товары в виде списка" width="16" height="14">
-              <span class="visually_hidden">Показать товары в виде списка</span>
-            </a>
-          </div>
+            </li>
+            <li>
+              <a href="#" class="button button-light">
+                <img src="/images/view-all.svg" alt="Показать с полными описанием" width="16" height="14">
+                <span class="visually_hidden">Показать с полными
+                  описанием</span><!--Не понятно как назывется данное отображение-->
+              </a>
+            </li>
+            <li>
+              <a href="#" class="button button-light">
+                <img src="/images/view-list.svg" alt="Показать товары в виде списка" width="16" height="14">
+                <span class="visually_hidden">Показать товары в виде списка</span>
+              </a>
+            </li>
         </div>
       </section>
       <!--Карточки товара-->
@@ -304,11 +308,11 @@
           <!--Нумерация страниц-->
           <section class="pagination"></section>
           <ul class="pagination-list">
-            <li class="pagination-item">
+            <li class="pagination-item current">
               <a class="pagination-link pagination-current">1</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
+              <a class="pagination-link " href="#">2</a>
             </li>
             <li class="pagination-item">
               <a class="pagination-link" href="#">3</a>
@@ -374,22 +378,3 @@
   </body>
 
 </html>
-
-.pagination {
-  display: flex;
-  width: 1060px;
-  height: 60px;
-}
-
-.pagination-list {
-  display: flex;
-  list-style-type: none;
-  justify-content: flex-start;
-}
-
-.pagination-item {
-  padding: 60px;
-  background: #82B3D3;
-  margin-left: 15px;
-  border-radius: 4px;
-}
