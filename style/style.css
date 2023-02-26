@@ -454,12 +454,11 @@ body {
   text-transform: uppercase;
 }
 
-.subscription
-{
-background-image: url(/images/Subscribe.jpg);
-text-align: center;
-margin: 0;
-padding: 96px 258px 104px 258px;
+.subscription {
+  background-image: url(/images/Subscribe.jpg);
+  text-align: center;
+  margin: 0;
+  padding: 96px 258px 104px 258px;
 }
 
 .subscription-text-container {
@@ -525,7 +524,8 @@ padding: 96px 258px 104px 258px;
 input[type="email" i] {
   display: block;
   padding: 14px 0 14px 20px;
-  color: rgba(255, 255, 255, 1);
+  background-color: rgba(242, 242, 242, 1);
+  ;
   width: 100%;
   border-radius: 4px 0 0 4px;
   outline: none;
@@ -613,11 +613,16 @@ input[type="email" i] {
 
 .catalog-filter {
   display: flex;
+  justify-content: space-between;
   width: 1060px;
   height: 160px;
-  justify-content: flex-start;
   margin: 0;
   padding: 0;
+}
+
+.catalog-group-type {
+  display: flex;
+  gap: 70px;
 }
 
 .catalog-filter-list {
@@ -634,13 +639,13 @@ input[type="email" i] {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1px 0;
 }
 
 .catalog-filter-group {
   border: none;
   padding: 0;
   margin: 0;
-  margin-right: 70px;
 }
 
 .catalog-filter-title {
@@ -651,20 +656,34 @@ input[type="email" i] {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
+  padding: 0;
 }
 
 .control-input {
   width: 20px;
   height: 20px;
-  border-radius: 50%;
   padding: 0;
   margin: 0;
   margin-right: 16px;
+  outline: none;
+  border: none;
+}
+
+input[type="radio" i] {
+  outline: none;
+  border: none;
 }
 
 .control {
   display: flex;
   border-radius: 50%;
+}
+
+.catalog-filter-price-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 70px;
 }
 
 .range-price-list {
@@ -678,19 +697,37 @@ input[type="email" i] {
 .value-price-list {
   display: grid;
   grid-template-columns: 143px 143px;
-  grid-template-rows: 48px;
   padding: 0;
   margin-bottom: 36px;
+  gap: 2px;
+  list-style-type: none;
 }
 
 .value-price-item.min {
+  display: block;
   border-radius: 4px 0 0 4px;
   border: none;
   outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 12px 20px;
+
 }
 
 .value-price-item.max {
+  display: block;
   border-radius: 0 4px 4px 0;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 12px 20px;
+}
+
+.value-price-item .range {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
 }
 
 .range {
@@ -703,19 +740,10 @@ input[type="email" i] {
   grid-template-columns: 191px;
   grid-template-rows: 36px 36px;
   padding: 0;
+  gap: 32px;
   margin: 0;
-}
+  margin-top: 56px;
 
-.button-reset {
-  width: 100%;
-  height: 100%;
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  color: rgba(255, 255, 255, 1);
-  text-transform: uppercase;
 }
 
 .blue-submit {
@@ -728,7 +756,28 @@ input[type="email" i] {
   line-height: 20px;
   color: rgba(255, 255, 255, 1);
   text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  background-color: rgba(130, 179, 211, 1);
 }
+
+.button-reset {
+  width: 100%;
+  height: 100%;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  background-color: #00000000;
+  margin-bottom: 0;
+}
+
+
 
 .sort {
   max-width: 1060px;
@@ -741,6 +790,12 @@ input[type="email" i] {
 .search-result {
   margin: 0;
   padding: 0;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
 }
 
 .select-control {
@@ -776,13 +831,13 @@ input[type="email" i] {
   margin: 0 auto;
 }
 
+
 .product-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
+  grid-template-rows: 438px;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
   list-style-type: none;
   gap: 16px;
 }
@@ -868,13 +923,22 @@ input[type="email" i] {
   padding: 0;
 }
 
+.rectangle-catalog {
+  border-bottom: 2px;
+  border-color: black;
+  width: 100%;
+  margin-top: 40px;
+}
+
 .pagination {
+  margin-top: 40px;
   width: 1060px;
 }
 
 .pagination-list {
   display: flex;
   list-style-type: none;
+  margin: 0;
 }
 
 .pagination-item.current {
@@ -885,7 +949,7 @@ input[type="email" i] {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 8px;
+  margin: 0 8px 0 8px;
   color: black;
 }
 
@@ -897,7 +961,7 @@ input[type="email" i] {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 8px;
+  margin: 0 8px 0 8px;
 }
 
 .pagination-link.pagination-current {
@@ -919,6 +983,40 @@ input[type="email" i] {
   line-height: 36px;
   text-decoration: none;
   display: block;
+}
+
+.subscription-catalog {
+  text-align: center;
+  margin: 0;
+  padding: 96px 258px 104px 258px;
+}
+
+.subscription-catalog .subscription-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.subscription-catalog .subscription-title {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 0;
+  color: rgba(0, 0, 0, 1);
+}
+
+.subscription-catalog .subscription-description {
+  color: rgba(0, 0, 0, 1);
+}
+
+
+.email {
+  width: 100%;
 }
 
 .page-footer {

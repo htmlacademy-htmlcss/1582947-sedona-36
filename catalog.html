@@ -87,77 +87,83 @@
             <!--Форма-->
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <!--Фильтр по чекбоксам-->
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Инфроструктура:</legend>
-                <div class="filter-catalog-container">
+              <div class="catalog-group-type">
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Инфраструктура:</legend>
+                  <div class="filter-catalog-container">
+                    <ul class="catalog-filter-list">
+                      <li class="catalog-filter-item">
+                        <label class="control">
+                          <input class="control-input" type="checkbox" name="swimming-pool" checked>
+                          Бассейн
+                        </label>
+                      </li>
+                      <li class="catalog-filter-item">
+                        <label class="control">
+                          <input class="control-input" type="checkbox" name="parking" checked>
+                          Парковка
+                        </label>
+                      </li>
+                      <li class="catalog-filter-item">
+                        <label class="control">
+                          <input class="control-input" type="checkbox" name="wi-fi">
+                          WI-FI
+                        </label>
+                      </li>
+                    </ul>
+                </fieldset>
+                <!--Фильтр по селектам-->
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Тип жилья:</legend>
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
                       <label class="control">
-                        <input class="control-input" type="checkbox" name="swimming-pool" checked>
-                        Бассейн
+                        <input class="control-input" type="radio" name="product-group" checked>
+                        Гостиница
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control">
-                        <input class="control-input" type="checkbox" name="parking" checked>
-                        Парковка
+                        <input class="control-input" type="radio" name="product-group">
+                        Мотель
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control">
-                        <input class="control-input" type="checkbox" name="wi-fi">
-                        WI-FI
+                        <input class="control-input" type="radio" name="product-group">
+                        Апартаменты
                       </label>
                     </li>
                   </ul>
-              </fieldset>
-              <!--Фильтр по селектам-->
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Тип жилья:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="product-group" checked>
-                      Гостиница
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="product-group">
-                      Мотель
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="product-group">
-                      Апартамент
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
+                </fieldset>
+              </div>
               <!--Фильтр по стоимости-->
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                <ul class="range-price-list">
-                  <li class="catalog-range-price-item">
+              <div class="catalog-filter-price-button">
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                     <ul class="value-price-list">
-                      <!--Необходимо понять как еще засунуть сюда от и до-->
-                      <input class="value-price-item min" type="number" placeholder="0" value="от">
-                      <input class="value-price-item max" type="number" placeholder="9000" value="до">
+                      <li>
+                        <!--Необходимо понять как еще засунуть сюда от и до-->
+                        <input class="value-price-item min" type="text" placeholder="0">
+                      </li>
+                      <li>
+                        <input class="value-price-item max" type="text" placeholder="9000">
+                      </li>
+                      <li>
+                        <input class="value-price-item range" type="range" min="0" max="9000" step="1" value="6000">
+                      </li>
                     </ul>
-                    <input class="range" type="range" min="0" max="9000" step="1" value="6000">
                     <!--Понять как передлать на 2 ползунка-->
+                </fieldset>
+                <ul class="button-submit-filter">
+                  <li class="button-submit-filter-item">
+                    <button class="button blue-submit" type="submit">Применить</button>
+                  </li>
+                  <li class="button-submit-filter-item">
+                    <button class="button button-reset" type="reset">Сбросить</button>
                   </li>
                 </ul>
-              </fieldset>
-              <ul class="button-submit-filter">
-                <li class="button-submit-filter-item">
-                  <button class="button blue-submit" type="submit">Применить</button>
-                </li>
-                <li class="button-submit-filter-item">
-                  <button class="button button-reset" type="reset">Сбросить</button>
-                </li>
-              </ul>
+              </div>
             </form>
           </section>
         </header>
@@ -194,7 +200,6 @@
               </li>
           </div>
         </section>
-
 
         <!--Карточки товара-->
         <div class="main-page-catalog">
@@ -344,6 +349,7 @@
               </li>
             </ul>
           </section>
+          <img class="rectangle-catalog" src="/images/ret.png" width="1060px" height="2px">
 
           <!--Нумерация страниц-->
           <section class="pagination"></section>
@@ -368,8 +374,24 @@
             </li>
           </ul>
           </section>
+        </div>
       </main>
-
+      <section class="subscription-catalog">
+        <div class="subscription-text-container">
+          <h2 class="subscription-title">Подпишитесь на рассылку</h2>
+          <p class="subscription-description">
+            Только полезная информация и никакого спама,<br> честное бойскаутское!
+          </p>
+        </div>
+        <div class="subscription-form-container">
+          <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="email" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email"
+              required />
+            <button class="button subscription-button" type="submit">Подписаться
+              <span class="visually-hidden">Подписаться</span></button>
+          </form>
+        </div>
+      </section>
       <!--Футер-->
       <footer class="page-footer">
         <div class="page-footer-container">
