@@ -30,6 +30,12 @@
   font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
   box-sizing: border-box;
@@ -133,6 +139,24 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
+  position: relative;
+}
+
+.favorites-count {
+  display: block;
+  position: absolute;
+  padding: 2px;
+  background-color: rgba(125, 181, 79, 1);
+  border-radius: 50%;
+  font-size: 8px;
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  top: 35%;
+  left: 72%;
+  transform: translate(-50%,-50%);
+  color: white;
+  padding: 5px 4px;
 }
 
 .user-navigation .navigation-link {
@@ -614,10 +638,9 @@ input[type="email" i] {
 .catalog-filter {
   display: flex;
   justify-content: space-between;
-  width: 1060px;
-  height: 160px;
   margin: 0;
   padding: 0;
+  gap: 150px;
 }
 
 .catalog-group-type {
@@ -681,9 +704,8 @@ input[type="radio" i] {
 
 .catalog-filter-price-button {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   gap: 70px;
+  align-items: flex-start;
 }
 
 .range-price-list {
@@ -692,46 +714,46 @@ input[type="radio" i] {
   margin: 0;
 }
 
-.catalog-range-price-item {}
-
 .value-price-list {
   display: grid;
-  grid-template-columns: 143px 143px;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
   padding: 0;
-  margin-bottom: 36px;
-  gap: 2px;
-  list-style-type: none;
+  margin: 0;
+  gap: 36px 2px;
 }
 
-.value-price-item.min {
-  display: block;
-  border-radius: 4px 0 0 4px;
-  border: none;
-  outline: none;
-  width: 100%;
-  height: 100%;
-  padding: 12px 20px;
+.value-price-item {}
 
-}
-
-.value-price-item.max {
-  display: block;
-  border-radius: 0 4px 4px 0;
-  border: none;
-  outline: none;
-  width: 100%;
-  height: 100%;
-  padding: 12px 20px;
-}
-
-.value-price-item .range {
+.value-price-item:nth-child(3) {
   grid-column-start: 1;
   grid-column-end: 3;
-  width: 100%;
 }
 
-.range {
+.value-price-label {
+  display: flex;
+}
+
+.value-price-label.price-label-number {
+  background-color: white;
+}
+
+.value-price-input {
+  display: block;
   width: 100%;
+  font-weight: ;
+
+}
+
+.price-input-number {
+  padding: 12px 20px;
+  color: #000000;
+  border: none;
+}
+
+.value-price-text {
+  color: rgb(0, 0, 0);
+  padding: 12px 20px;
 }
 
 .button-submit-filter {

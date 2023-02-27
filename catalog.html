@@ -77,7 +77,6 @@
               </li>
               <li class="breadcrumbs-item">
                 <img src="/images/breadcrumbs-arrow-right.svg">
-                </a>
               </li>
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="">Гостиницы</a>
@@ -111,6 +110,7 @@
                         </label>
                       </li>
                     </ul>
+                  </div>
                 </fieldset>
                 <!--Фильтр по селектам-->
                 <fieldset class="catalog-filter-group">
@@ -139,22 +139,27 @@
               </div>
               <!--Фильтр по стоимости-->
               <div class="catalog-filter-price-button">
-                <fieldset class="catalog-filter-group">
-                  <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                    <ul class="value-price-list">
-                      <li>
-                        <!--Необходимо понять как еще засунуть сюда от и до-->
-                        <input class="value-price-item min" type="text" placeholder="0">
-                      </li>
-                      <li>
-                        <input class="value-price-item max" type="text" placeholder="9000">
-                      </li>
-                      <li>
-                        <input class="value-price-item range" type="range" min="0" max="9000" step="1" value="6000">
-                      </li>
-                    </ul>
-                    <!--Понять как передлать на 2 ползунка-->
-                </fieldset>
+                <ul class="value-price-list">
+                  <li class="value-price-item price-item-number">
+                    <!--Необходимо понять как еще засунуть сюда от и до-->
+                    <label class="value-price-label price-label-number">
+                      <input class="value-price-input price-input-number" type="text" placeholder="0">
+                      <span class="value-price-text">от</span>
+                    </label>
+                  </li>
+                  <li class="value-price-item price-item-number">
+                    <label class="value-price-label price-label-number">
+                      <input class="value-price-input price-input-number" type="text" placeholder="9000">
+                      <span class="value-price-text">до</span>
+                    </label>
+                  </li>
+                  <li class="value-price-item range">
+                    <label class="value-price-label">
+                      <input class="value-price-input range" type="range" min="0" max="9000" step="1" value="6000">
+                    </label>
+                  </li>
+                </ul>
+
                 <ul class="button-submit-filter">
                   <li class="button-submit-filter-item">
                     <button class="button blue-submit" type="submit">Применить</button>
@@ -198,6 +203,7 @@
                   <span class="visually-hidden">Показать товары в виде списка</span>
                 </a>
               </li>
+            </ul>
           </div>
         </section>
 
@@ -352,27 +358,27 @@
           <img class="rectangle-catalog" src="/images/ret.png" width="1060px" height="2px">
 
           <!--Нумерация страниц-->
-          <section class="pagination"></section>
-          <ul class="pagination-list">
-            <li class="pagination-item current">
-              <a class="pagination-link pagination-current">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link " href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">4</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">...</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">10</a>
-            </li>
-          </ul>
+          <section class="pagination">
+            <ul class="pagination-list">
+              <li class="pagination-item current">
+                <a class="pagination-link pagination-current">1</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link " href="#">2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">4</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">...</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">10</a>
+              </li>
+            </ul>
           </section>
         </div>
       </main>
