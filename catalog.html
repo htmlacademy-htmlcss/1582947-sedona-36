@@ -45,6 +45,7 @@
               <li class="navigation-item">
                 <a class="navigation-link" href="#"><img src="/images/heart.svg" alt="Добавить в избарнное" />
                   <span class="visually-hidden">Лайк</span>
+                  <span class="favorites-count">12</span>
                 </a>
               </li>
               <!--Скорее всего переход в каталог-->
@@ -139,35 +140,38 @@
               </div>
               <!--Фильтр по стоимости-->
               <div class="catalog-filter-price-button">
-                <ul class="value-price-list">
-                  <li class="value-price-item price-item-number">
-                    <!--Необходимо понять как еще засунуть сюда от и до-->
-                    <label class="value-price-label price-label-number">
-                      <input class="value-price-input price-input-number" type="text" placeholder="0">
-                      <span class="value-price-text">от</span>
-                    </label>
-                  </li>
-                  <li class="value-price-item price-item-number">
-                    <label class="value-price-label price-label-number">
-                      <input class="value-price-input price-input-number" type="text" placeholder="9000">
-                      <span class="value-price-text">до</span>
-                    </label>
-                  </li>
-                  <li class="value-price-item range">
-                    <label class="value-price-label">
-                      <input class="value-price-input range" type="range" min="0" max="9000" step="1" value="6000">
-                    </label>
-                  </li>
-                </ul>
+                <fieldset class="catalog-filter-group price">
+                  <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+                  <ul class="value-price-list">
+                    <li class="value-price-item price-item-number">
+                      <!--Необходимо понять как еще засунуть сюда от и до-->
+                      <label class="value-price-label price-label-number">
+                        <input class="value-price-input price-input-number left" type="text" placeholder="0">
+                        <span class="value-price-text">от</span>
+                      </label>
+                    </li>
+                    <li class="value-price-item price-item-number">
+                      <label class="value-price-label price-label-number">
+                        <input class="value-price-input price-input-number rigth" type="text" placeholder="9000">
+                        <span class="value-price-text">до</span>
+                      </label>
+                    </li>
+                    <li class="value-price-item range">
+                      <label class="value-price-label">
+                        <input class="value-price-input range" type="range" min="0" max="9000" step="1" value="6000">
+                      </label>
+                    </li>
+                  </ul>
 
-                <ul class="button-submit-filter">
-                  <li class="button-submit-filter-item">
-                    <button class="button blue-submit" type="submit">Применить</button>
-                  </li>
-                  <li class="button-submit-filter-item">
-                    <button class="button button-reset" type="reset">Сбросить</button>
-                  </li>
-                </ul>
+                  <ul class="button-submit-filter">
+                    <li class="button-submit-filter-item">
+                      <button class="button blue-submit" type="submit">Применить</button>
+                    </li>
+                    <li class="button-submit-filter-item">
+                      <button class="button button-reset" type="reset">Сбросить</button>
+                    </li>
+                  </ul>
+                </fieldset>
               </div>
             </form>
           </section>
@@ -177,8 +181,8 @@
           <h2 class="search-result">Найдено гостиниц: 38</h2>
           <!--Сортировка из выпадающего списка-->
           <select class="select-control" aria-label="Сортировка">
-            <option value="popular">Сначала популярное</option>
             <option value="cheap">Сначала дешёвое</option>
+            <option value="popular">Сначала популярное</option>
             <option value="expensive">Сначала дорогое</option>
           </select>
           <!--Смена вида отображения каталога-->
@@ -245,7 +249,7 @@
                       <img src="/images/star-rating.svg" alt="Рейтинг" width="18" height="17">
                     </li>
                   </ul>
-                  <p class="raiting-info">Рейтинг: 9,2</p>
+                  <p class="raiting-info">Рейтинг: 8,5</p>
                 </div>
               </li>
 
@@ -266,7 +270,7 @@
                 </ul>
                 <ul class="button-card">
                   <li class="button-card-item"><a class="button button-brown" href="#">Подробнее</a></li>
-                  <li class="button-card-item"><a class="button button-blue" href="#">В избранное</a></li>
+                  <li class="button-card-item"><a class="button button-green" href="#">В избранное</a></li>
                 </ul>
                 <div class="raiting-block">
                   <ul class="raiting-stars">
@@ -283,7 +287,7 @@
                       <img src="/images/star-rating.svg" alt="Рейтинг" width="18" height="17">
                     </li>
                   </ul>
-                  <p class="raiting-info">Рейтинг: 6,9</p>
+                  <p class="raiting-info">Рейтинг: 9,2</p>
                 </div>
               </li>
 
@@ -319,7 +323,7 @@
                       <img src="/images/star-rating.svg" alt="Рейтинг" width="18" height="17">
                     </li>
                   </ul>
-                  <p class="raiting-info">Рейтинг: 8,5</p>
+                  <p class="raiting-info">Рейтинг: 6,9</p>
                 </div>
               </li>
 
