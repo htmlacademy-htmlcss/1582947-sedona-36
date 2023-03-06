@@ -108,6 +108,11 @@ body {
   padding: 0 0 0 30px;
 }
 
+.navigation-link-current {
+  border-bottom: 2px solid rgba(117, 98, 87, 1);
+  border-
+}
+
 .user-navigation {
   display: flex;
   align-items: center;
@@ -148,12 +153,14 @@ body {
   position: absolute;
   background-color: rgba(125, 181, 79, 1);
   border-radius: 50%;
-  font-size: 8px;
+  font-family: 'PT Sans';
+  font-size: 10px;
+  font-weight: 400;
   min-width: 20px;
   width: 20px;
   height: 20px;
   top: 35%;
-  left: 75%;
+  left: 69%;
   transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 1);
   text-align: center;
@@ -174,7 +181,6 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .navigation-item {
@@ -189,19 +195,19 @@ body {
   margin-left: 20px;
 }
 
-.navigation-item.button:hover,
+.button.navigation-item-link-button:hover,
 .button.button-all-hotel:hover,
 .button.button-brown:hover {
   background-color: rgba(97, 80, 72, 1);
 }
 
-.navigation-item.button:focus,
+.button.navigation-item-link-button:focus,
 .button.button-all-hotel:focus,
 .button.button-brown:focus {
   background-color: rgba(97, 80, 72, 1);
 }
 
-.navigation-item.button:active,
+.button.navigation-item-link-button:active,
 .button.button-all-hotel:active,
 .button.button-brown:active {
   background-color: rgba(117, 97, 87, 1);
@@ -217,7 +223,7 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   padding: 8px 0;
-  ;
+
 }
 
 .main-container {
@@ -551,6 +557,7 @@ body {
 }
 
 .button.subscription-button {
+  display: block;
   padding: 8px 50px;
   font-family: 'PT Sans';
   font-style: normal;
@@ -590,11 +597,13 @@ input[type="email" i] {
   display: block;
   padding: 14px 0 14px 20px;
   background-color: rgba(242, 242, 242, 1);
-  ;
   width: 100%;
   border-radius: 4px 0 0 4px;
   outline: none;
   border: none;
+  font-family: 'PT Sans';
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .email {
@@ -867,35 +876,38 @@ input[type="radio" i] {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .search-result {
-  margin: 0;
+  display: block;
+  align-items: center;
   padding: 0;
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
-  line-height: 0;
+  line-height: 36px;
   text-transform: uppercase;
-  align-items: center;
-  display: flex;
+  margin: auto 0;
   margin-right: 200px;
+
 }
 
 .select-control {
+  display: block;
   border-radius: 4px;
   border-color: rgba(229, 229, 229, 1);
-  padding: 12px 20px;
+  padding: 11px 16px;
   line-height: 0;
   width: 292px;
-  font-weight: 400;
   font-size: 18px;
   color: rgba(51, 51, 51, 1);
   font-family: 'PT Sans';
   font-style: normal;
-  box-sizing: border-box;
   margin-right: 70px;
+  height: 49px;
+  box-sizing: border-box;
 }
 
 .select-control:hover {
@@ -912,7 +924,7 @@ input[type="radio" i] {
 
 .view-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .view-list {
@@ -923,6 +935,7 @@ input[type="radio" i] {
   padding: 0;
   min-width: 160px;
   margin-left: auto;
+  align-items: center;
 }
 
 .view-item {
@@ -1107,6 +1120,7 @@ input[type="radio" i] {
   justify-content: flex-start;
   margin: 0;
   padding: 0;
+  gap: 8px;
 }
 
 .raiting-info {
@@ -1116,37 +1130,45 @@ input[type="radio" i] {
   border-radius: 4px;
 }
 
+.pagination {
+  margin: 40px 0 60px 0;
+  padding: 0;
+}
+
 .rectangle-catalog {
-  border-bottom: 2px;
-  border-color: rgba(0, 0, 0, 1);
-  ;
-  width: 100%;
+  display: block;
+  padding: 0;
+  margin: 0;
   margin-top: 40px;
 }
 
-.pagination {
-  margin-top: 40px;
-  width: 1060px;
-}
 
 .pagination-list {
   display: flex;
   list-style-type: none;
   margin: 0;
+  padding: 0;
+  gap: 8px;
 }
 
 .pagination-item.current {
+  background: rgba(242, 242, 242, 1);
+}
+
+.pagination-item:nth-child(5) {
   width: 60px;
   height: 60px;
-  background: rgba(242, 242, 242, 1);
-  ;
+  background: rgb(255, 255, 255);
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 8px 0 8px;
-  color: rgba(0, 0, 0, 1);
-  ;
+  color: rgba(0, 0, 0, 1)
+}
+
+.pagination-item:nth-child(5) .pagination-link {
+  color: rgb(0, 0, 0);
+  background: rgba(242, 242, 242, 1);
 }
 
 .pagination-item {
@@ -1157,7 +1179,6 @@ input[type="radio" i] {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 8px 0 8px;
 }
 
 .pagination-link.pagination-current {
