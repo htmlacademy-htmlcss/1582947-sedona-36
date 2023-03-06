@@ -216,13 +216,14 @@ body {
 
 
 .button.navigation-item-link-button {
+  display: block;
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  padding: 8px 0;
+  padding: 8px 34px;
 
 }
 
