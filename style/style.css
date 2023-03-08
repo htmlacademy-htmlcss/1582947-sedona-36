@@ -49,7 +49,6 @@ body {
   line-height: 21px;
   color: black;
   background-color: rgba(255, 255, 255, 1);
-  ;
   padding: 0;
   margin: 0;
   display: flex;
@@ -58,7 +57,7 @@ body {
 
 .shadow {
   margin: 0 auto;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.527);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
@@ -138,7 +137,8 @@ body {
 
 .navigation-link {
   text-decoration: none;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
+
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -156,7 +156,7 @@ body {
   position: absolute;
   background-color: rgba(125, 181, 79, 1);
   border-radius: 50%;
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-size: 10px;
   font-weight: 400;
   min-width: 20px;
@@ -192,7 +192,6 @@ body {
   align-items: center;
 }
 
-
 .button.navigation-item-link-button:hover,
 .button.button-all-hotel:hover,
 .button.button-brown:hover {
@@ -209,9 +208,8 @@ body {
 .button.button-all-hotel:active,
 .button.button-brown:active {
   background-color: rgba(117, 97, 87, 1);
-  color: rgba(255, 255, 255, 0.3)
+  color: rgba(255, 255, 255, 0.3);
 }
-
 
 .button.navigation-item-link-button {
   display: block;
@@ -266,7 +264,8 @@ body {
 
 .info-title {
   display: block;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
+
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -290,7 +289,6 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
-
 
 .advantages-list {
   list-style-type: none;
@@ -333,7 +331,7 @@ body {
   margin: 0;
   text-transform: uppercase;
   text-align: center;
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -352,7 +350,7 @@ body {
   padding: 0;
   margin: 0;
   text-align: center;
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -369,7 +367,6 @@ body {
   grid-column-end: 3;
 }
 
-
 .services-info {
   padding: 64px auto;
 }
@@ -382,16 +379,16 @@ body {
   text-transform: uppercase;
   gap: 20px;
   padding-top: 64px;
-  padding-bottom: 64px
+  padding-bottom: 64px;
 }
 
 .services-info-title {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  margin: 0
+  margin: 0;
 }
 
 .sercices-description-info {
@@ -399,7 +396,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: rgba(51, 51, 51, 1);
-  margin: 0
+  margin: 0;
 }
 
 .services {
@@ -439,7 +436,8 @@ body {
 }
 
 .services-title {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
+
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -471,7 +469,8 @@ body {
 }
 
 .appointment-title {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
+
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -483,7 +482,8 @@ body {
 }
 
 .appointment-description {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -519,7 +519,8 @@ body {
 }
 
 .subscription-title {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
+
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -530,7 +531,8 @@ body {
 }
 
 .subscription-description {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
+
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -557,7 +559,7 @@ body {
 .button.subscription-button {
   display: block;
   padding: 8px 50px;
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -586,10 +588,8 @@ body {
 .button.blue-submit:active,
 .button.button-blue:active {
   background-color: rgba(104, 162, 202, 1);
-  color: rgba(255, 255, 255, 0.3)
+  color: rgba(255, 255, 255, 0.3);
 }
-
-
 
 input[type="email" i] {
   display: block;
@@ -599,7 +599,7 @@ input[type="email" i] {
   border-radius: 4px 0 0 4px;
   outline: none;
   border: none;
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
 }
@@ -617,7 +617,6 @@ input[type="email" i] {
 
 .inner-header {
   color: rgba(255, 255, 255, 1);
-  ;
   padding: 0;
   margin: 0;
   background-image: url(/images/filter-background.jpg);
@@ -640,7 +639,6 @@ input[type="email" i] {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-
 }
 
 .filter {
@@ -665,8 +663,7 @@ input[type="email" i] {
 .breadcrumbs-link {
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
-  ;
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -715,7 +712,7 @@ input[type="email" i] {
 
 .catalog-filter-title {
   margin-bottom: 32px;
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -749,7 +746,6 @@ input[type="radio" i] {
   flex-direction: row;
 }
 
-
 .catalog-filter-price-button {
   display: flex;
   gap: 70px;
@@ -772,7 +768,6 @@ input[type="radio" i] {
   margin-right: 70px;
   gap: 36px 2px;
 }
-
 
 .value-price-item:nth-child(3) {
   grid-column-start: 1;
@@ -828,7 +823,7 @@ input[type="radio" i] {
 .blue-submit {
   width: 100%;
   height: 100%;
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -843,7 +838,7 @@ input[type="radio" i] {
 .button-reset {
   width: 100%;
   height: 100%;
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -881,7 +876,8 @@ button.button-reset:active {
   display: block;
   align-items: center;
   padding: 0;
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
+
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -889,7 +885,6 @@ button.button-reset:active {
   text-transform: uppercase;
   margin: auto 0;
   margin-right: 200px;
-
 }
 
 .select-control {
@@ -901,7 +896,8 @@ button.button-reset:active {
   width: 292px;
   font-size: 18px;
   color: rgba(51, 51, 51, 1);
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
+
   font-style: normal;
   margin-right: 70px;
   height: 49px;
@@ -973,7 +969,6 @@ button.button-reset:active {
   margin: 0 auto;
 }
 
-
 .product-list {
   display: grid;
   grid-template-columns: 340px 340px 340px;
@@ -989,7 +984,6 @@ button.button-reset:active {
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(230, 230, 230, 1);
-  ;
   border-radius: 4px;
   align-items: stretch;
   padding: 20px;
@@ -1020,7 +1014,6 @@ button.button-reset:active {
 .button.button-blue {
   padding: 8px 20px;
   color: rgba(255, 255, 255, 1);
-  ;
   text-decoration: none;
   font-weight: 700;
   font-size: 16px;
@@ -1032,7 +1025,6 @@ button.button-reset:active {
   background-color: rgba(125, 181, 79, 1);
   padding: 8px 20px;
   color: rgba(255, 255, 255, 1);
-  ;
   text-decoration: none;
   font-weight: 700;
   font-size: 16px;
@@ -1059,7 +1051,6 @@ button.button-reset:active {
 
 .button-blue {
   background: rgba(130, 179, 211, 1);
-  ;
 }
 
 .raiting-block {
@@ -1140,7 +1131,6 @@ button.button-reset:active {
   margin-top: 40px;
 }
 
-
 .pagination-list {
   display: flex;
   list-style-type: none;
@@ -1161,7 +1151,7 @@ button.button-reset:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(0, 0, 0, 1)
+  color: rgba(0, 0, 0, 1);
 }
 
 .pagination-item:nth-child(5) .pagination-link {
@@ -1181,7 +1171,8 @@ button.button-reset:active {
 
 .pagination-link.pagination-current {
   color: rgb(0, 0, 0);
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
+
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -1191,8 +1182,8 @@ button.button-reset:active {
 
 .pagination-link {
   color: rgba(255, 255, 255, 1);
-  ;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
+
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -1230,7 +1221,8 @@ button.button-reset:active {
 }
 
 .subscription-catalog .subscription-title {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
+
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -1243,7 +1235,6 @@ button.button-reset:active {
 .subscription-catalog .subscription-description {
   color: rgba(0, 0, 0, 1);
 }
-
 
 .email {
   width: 100%;
@@ -1266,7 +1257,6 @@ button.button-reset:active {
   display: grid;
   grid-template-columns: 142px;
   grid-template-rows: 40px;
-
 }
 
 .footer-social-list {
@@ -1301,11 +1291,9 @@ button.button-reset:active {
   justify-content: center;
 }
 
-
 .footer-contacts-address-phone {
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
-  ;
   font-size: 40px;
   text-align: end;
   text-transform: uppercase;
@@ -1338,20 +1326,20 @@ button.button-reset:active {
   justify-content: center;
 }
 
-footer-logo-img:hover {
+.footer-logo-img:hover {
   color: rgba(117, 97, 87, 1);
-
 }
 
 .modal-container {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 2;
+  /* display: flex; */
+  display: none;
 }
 
 .modal {
@@ -1359,15 +1347,12 @@ footer-logo-img:hover {
   margin: auto;
   padding: 40px;
   background-color: rgba(255, 255, 255, 1);
-  ;
-
 }
 
 .search-hotel-popup {
   position: relative;
   padding: 64px 70px;
   background-color: rgba(255, 255, 255, 1);
-  ;
   border-radius: 30px;
 }
 
@@ -1406,7 +1391,6 @@ footer-logo-img:hover {
   justify-content: flex-start;
 }
 
-
 .popup-item-title {
   padding: 12px 0;
   margin: 0;
@@ -1429,13 +1413,12 @@ footer-logo-img:hover {
   width: 440px;
 }
 
-.adults {
+.popup-item-adults {
   display: flex;
   flex-direction: row;
   border: none;
   outline: none;
   background-color: rgba(242, 242, 242, 1);
-  ;
   margin-right: 88px;
   margin-left: 46px;
 }
@@ -1445,16 +1428,16 @@ footer-logo-img:hover {
   margin-right: 10px;
 }
 
-.child {
+.popup-item-child {
   display: flex;
   flex-direction: row;
   outline: none;
   border: none;
   background-color: rgba(242, 242, 242, 1);
-  ;
 }
 
-.quantity {}
+.quantity {
+}
 
 .quantity.input-item {
   width: 31px;
@@ -1472,7 +1455,6 @@ footer-logo-img:hover {
 
 .count {
   background-color: rgba(242, 242, 242, 1);
-  ;
   width: 20px;
   height: 20px;
   background-repeat: no-repeat;
@@ -1488,7 +1470,6 @@ footer-logo-img:hover {
 
 .blue-popup {
   background-color: rgba(130, 179, 211, 1);
-  ;
   padding: 18px 0;
   width: 100%;
   height: 100%;
@@ -1496,7 +1477,6 @@ footer-logo-img:hover {
   font-size: 20px;
   line-height: 24px;
   color: rgba(255, 255, 255, 1);
-  ;
   text-transform: uppercase;
   border: none;
 }
@@ -1511,7 +1491,6 @@ footer-logo-img:hover {
   width: 26px;
   height: 26px;
   margin-right: 46px;
-
 }
 
 .explanation-text {
@@ -1522,6 +1501,5 @@ footer-logo-img:hover {
   margin: 0;
   padding: 0;
   color: rgba(255, 255, 255, 1);
-  ;
   font-weight: 700;
 }
