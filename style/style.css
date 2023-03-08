@@ -788,6 +788,10 @@ input[type="radio" i] {
 
 .value-price-label.price-label-number {
   background-color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+}
+
+.price-label-number .left {
   border-radius: 4px 0 0 4px;
 }
 
@@ -805,16 +809,9 @@ input[type="radio" i] {
   line-height: 24px;
 }
 
-.price-input-number {}
-
-.price-input-number.left {
-  border-radius: 4px 0 0 4px;
-}
-
 .value-price-text {
   color: rgba(229, 229, 229, 1);
   padding: 12px 20px;
-  border-radius: 0 4px 4px 0;
 }
 
 .button-submit-filter {
