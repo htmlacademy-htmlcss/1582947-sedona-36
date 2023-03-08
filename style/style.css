@@ -858,15 +858,15 @@ input[type="radio" i] {
   margin-bottom: 0;
 }
 
-.button-reset:hover {
+button.button-reset:hover {
   color: rgba(255, 255, 255, 1);
 }
 
-.button-reset:focus {
+button.button-reset:focus {
   border-color: rgba(131, 179, 211, 1);
 }
 
-.button-reset:active {
+button.button-reset:active {
   border-color: rgba(131, 179, 211, 1);
 }
 
