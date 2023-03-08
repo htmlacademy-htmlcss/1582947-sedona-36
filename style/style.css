@@ -58,7 +58,7 @@ body {
 
 .shadow {
   margin: 0 auto;
-  box-shadow: 0 0 40px rgb(0, 0, 0);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.527);
 }
 
 .visually-hidden {
@@ -103,19 +103,22 @@ body {
   margin: 0;
   list-style-type: none;
   display: grid;
-  grid-template-columns: 100px 114px 125px;
+  grid-template-columns: auto auto auto;
   grid-template-rows: 64px;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 46px;
+  gap: 32px;
 }
 
 .navigation-link-current {
   border-bottom: 2px solid rgba(117, 98, 87, 1);
-  border-
 }
 
 .user-navigation {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
   align-items: center;
+  margin: 0;
+  gap: 26px;
 }
 
 .navigation-list.user-navigation {
@@ -184,16 +187,11 @@ body {
 }
 
 .navigation-item {
-  margin-left: 20px;
-
   margin: 0;
   justify-content: center;
   align-items: center;
 }
 
-.navigation-item.button {
-  margin-left: 20px;
-}
 
 .button.navigation-item-link-button:hover,
 .button.button-all-hotel:hover,
@@ -224,7 +222,6 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   padding: 8px 34px;
-
 }
 
 .main-container {
@@ -791,8 +788,12 @@ input[type="radio" i] {
   overflow: hidden;
 }
 
-.price-label-number .left {
+.price-label-number.left {
   border-radius: 4px 0 0 4px;
+}
+
+.price-label-number.right {
+  border-radius: 0 4px 4px 0;
 }
 
 .value-price-input {
@@ -856,17 +857,16 @@ input[type="radio" i] {
 }
 
 button.button-reset:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 button.button-reset:focus {
-  border-color: rgba(131, 179, 211, 1);
+  border: 3px solid rgba(131, 179, 211, 1);
 }
 
 button.button-reset:active {
-  border-color: rgba(131, 179, 211, 1);
+  color: rgba(255, 255, 255, 0.3);
 }
-
 
 .sort {
   max-width: 1060px;
