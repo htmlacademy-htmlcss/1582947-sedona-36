@@ -229,7 +229,7 @@ body {
 }
 
 .hero-block {
-  background-image: url(./images/index-background.jpg);
+  background-image: url(../images/index-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -504,7 +504,7 @@ body {
 }
 
 .subscription {
-  background-image: url(../images/Subscribe.jpg);
+  background-image: url(../images/subscribe.jpg);
   text-align: center;
   margin: 0;
   padding: 96px 258px 104px 258px;
