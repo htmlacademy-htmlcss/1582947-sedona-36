@@ -12,62 +12,50 @@
       <!--Навигация-->
       <!--Хедер-->
       <header class="page-header">
-        <div class="page-header-container">
-          <!--Навигация / верхняя панель-->
-          <a class="logo" href="./index.html">
-            <img
-              class="logo-header"
-              src="./images/logo.svg"
-              width="140"
-              height="70"
-              alt="Логотип и переход на главную страницу"
-            />
-          </a>
-          <nav class="navigation">
-            <ul class="navigation-list">
-              <!--Переход на главную-->
-              <li class="navigation-item">
-                <a
-                  class="navigation-link"
-                  href="./index.html"
-                  >Главная</a
-                >
-              </li>
-              <!--Переход в раздел о себе-->
-              <li class="navigation-item">
-                <a class="navigation-link" href="#">О Седоне</a>
-              </li>
-              <!--Переход в каталог гостиниц-->
-              <li class="navigation-item ">
-                <a class="navigation-link navigation-link-current" href="./catalog.html">Гостиницы</a>
-              </li>
-            </ul>
-            <!--Поиск-->
-            <ul class="user-navigation">
-              <li class="navigation-item">
-                <a class="navigation-link" href="#">
-                  <img src="./images/search.svg" alt="Кнопка поиска" width="20" height="20" />
-                  <span class="visually-hidden">Поиск</span>
-                </a>
-              </li>
-              <!--Поставить лайк-->
-              <li class="navigation-item">
-                <a class="navigation-link" href="#"
-                  ><img src="./images/heart.svg" alt="Добавить в избарнное" width="18" height="17"/>
-                  <span class="visually-hidden">Лайк</span>
-                  <span class="favorites-count">12</span>
-                </a>
-              </li>
-              <!--Скорее всего переход в каталог-->
-              <li class="navigation-item">
-                <a class="button navigation-item-link-button" href="#">
-                  Хочу сюда!
-                  <span class="visually-hidden">Хочу сюда </span>
-                </a>
-                </li>
-            </ul>
-          </nav>
-        </div>
+        <!--Навигация верхняя панель-->
+        <a class="logo" href="./index.html">
+          <img class="logo-header" src="./images/logo.svg" width="140" height="70"
+            alt="Логотип и переход на главную страницу">
+        </a>
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <!--Переход на главную-->
+            <li class="navigation-item">
+              <a class="navigation-link navigation-link-current" href="./index.html">Главная</a>
+            </li>
+            <!--Переход в раздел о себе-->
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">О Седоне</a>
+            </li>
+            <!--Переход в каталог гостиниц-->
+            <li class="navigation-item">
+              <a class="navigation-link" href="./catalog.html">Гостиницы</a>
+            </li>
+          </ul>
+          <!--Поиск-->
+          <ul class="user-navigation">
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">
+                <img src="./images/search.svg" alt="Кнопка поиска" width="20" height="20">
+                <span class="visually-hidden">Поиск.</span>
+              </a>
+            </li>
+            <!--Поставить лайк-->
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">
+                <img src="./images/heart.svg" alt="Добавить в избарнное" width="18" height="17">
+                <span class="visually-hidden">Лайк.</span>
+                <span class="favorites-count">12</span>
+              </a>
+            </li>
+            <!--Скорее всего переход в каталог-->
+            <li class="navigation-item">
+              <a class="button navigation-item-link-button" href="#">Хочу сюда!
+                <span class="visually-hidden">Конпка, хочу сюда.</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </header>
 
       <!--Основное содержаение-->
@@ -393,68 +381,62 @@
         </div>
       </main>
       <section class="subscription-catalog">
-        <div class="subscription-text-container">
-          <h2 class="subscription-title">Подпишитесь на рассылку</h2>
+          <h3 class="subscription-title">Подпишитесь на рассылку</h3>
           <p class="subscription-description">
-            Только полезная информация и никакого спама,<br> честное бойскаутское!
+            Только полезная информация и никакого спама,<br>
+            честное бойскаутское!
           </p>
-        </div>
-        <div class="subscription-form-container">
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="email" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email"
-              required />
-            <button class="button subscription-button" type="submit">Подписаться
-              <span class="visually-hidden">Подписаться</span></button>
+            <input class="email" placeholder="Ваш e-mail" type="email" name="subscription-email"
+              id="subscription-email" required>
+            <button class="button subscription-button" type="submit">
+              Подписаться <span class="visually-hidden">Подписаться</span>
+            </button>
           </form>
-        </div>
       </section>
-      <!--Футер-->
-      <footer class="page-footer">
-        <div class="page-footer-container">
-          <!--Соц. сети-->
-          <section class="footer-social">
-            <div class="footer-social-container">
-              <ul class="footer-social-list">
-                <li class="footer-social-item">
-                  <a class="footer-social-button" href="https://vk.com/htmlacademy">
-                    <img src="./images/social-vk.svg" alt="ВК" width="24" height="14"/>
-                    <span class="visually-hidden">Ссылка на ВКонтакте</span>
-                  </a>
-                </li>
-                <li class="footer-social-item">
-                  <a class="footer-social-button" href="https://t.me/htmlacademy">
-                    <img src="./images/social-telegram.svg" alt="Телеграмм" width="18" height="15"/>
-                    <span class="visually-hidden">Ссылка на Телеграм
-                    </span>
-                  </a>
-                </li>
-                <li class="footer-social-item">
-                  <a class="footer-social-button" href="https://www.youtube.com/user/htmlacademyru">
-                    <img src="./images/social-youtube.svg" alt="Ютюб" width="22" height="17"/>
-                    <span class="visually-hidden">Ссылка на Ютюб</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </section>
+    </main>
+    <!--Футер-->
+    <footer class="page-footer">
+        <!--Соц. сети-->
+        <section class="footer-social">
+            <ul class="footer-social-list">
+              <li class="footer-social-item">
+                <a class="footer-social-button" href="https://vk.com/htmlacademy">
+                  <img src="./images/social-vk.svg" alt="ВК" width="24" height="14">
+                  <span class="visually-hidden">Ссылка на ВКонтакте</span>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a class="footer-social-button" href="https://t.me/htmlacademy">
+                  <img src="./images/social-telegram.svg" alt="Телеграмм" width="18" height="15">
+                  <span class="visually-hidden">Ссылка на Телеграм </span>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a class="footer-social-button" href="https://www.youtube.com/user/htmlacademyru">
+                  <img src="./images/social-youtube.svg" alt="Ютюб" width="22" height="17">
+                  <span class="visually-hidden">Ссылка на Ютюб</span>
+                </a>
+              </li>
+            </ul>
+        </section>
 
-          <!--Контакты-->
-          <section class="footer-contacts">
-            <address class="footer-contacts-address">
-              <a class="footer-contacts-address-phone" href="tel:+78128121212">
-                +7 (812) 812-12-12</a>
-            </address>
-          </section>
+        <!--Контакты-->
+        <section class="footer-contacts">
+          <address class="footer-contacts-address">
+            <a class="footer-contacts-address-phone" href="tel:+78128121212">
+              +7 (812) 812-12-12</a>
+          </address>
+        </section>
 
-          <!--Лого ссылка на академию-->
-          <section class="footer-logo">
-            <a class="footer-logo-img" href="https://htmlacademy.ru/">
-              <img src="./images/html-academy.svg" alt="Логотип" width="115" height="33" />
-              <span class="visually-hidden">Ссылка на HTML Academy</span>
-            </a>
-          </section>
-        </div>
-      </footer>
+        <!--Лого ссылка на академию-->
+        <section class="footer-logo">
+          <a class="footer-logo-img" href="https://htmlacademy.ru/">
+            <img src="./images/html-academy.svg" alt="Логотип" width="115" height="33">
+            <span class="visually-hidden">Ссылка на HTML Academy</span>
+          </a>
+        </section>
+    </footer>
     </div>
   </body>
 

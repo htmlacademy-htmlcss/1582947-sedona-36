@@ -78,16 +78,13 @@ body {
   color: rgba(0, 0, 0, 1);
   background-color: rgba(255, 255, 255, 1);
   display: flex;
-}
-
-.page-header-container {
-  display: flex;
   max-width: 1200px;
   margin: 0 auto;
   align-items: center;
   padding: 0 70px;
   box-sizing: border-box;
 }
+
 
 .navigation {
   display: flex;
@@ -230,24 +227,12 @@ body {
 }
 
 .hero-block {
-  background-image: url(../images/index-background.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url(../images/index-background.jpg), url(../images/divider.svg);
+  background-size: 100% auto, 100% auto;
+  background-repeat: repeat-y, no-repeat;
+  background-position: bottom center;
   display: flex;
-  justify-content: center;
   padding: 51px 371px 82px 371px;
-  position: relative;
-  height: 100%;
-}
-
-.logo-welcome {
-  display: block;
-  width: auto;
-}
-
-.hero-divider {
-  position: absolute;
-  bottom: 0;
 }
 
 .info-container {
@@ -266,7 +251,6 @@ body {
 .info-title {
   display: block;
   font-family: "PT Sans", sans-serif;
-
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -286,25 +270,20 @@ body {
   margin: 0;
 }
 
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
 .advantages-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: grid;
-  grid-template-columns: 400px 400px 400px;
-  grid-template-rows: 385px 385px 385px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantages-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 385px;
 }
 
 .dark-blue {
@@ -325,7 +304,10 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  width: 230px;
+  margin: 102px 85px;
 }
+
 
 .advantages-title {
   padding: 0;
@@ -352,36 +334,20 @@ body {
   margin: 0;
   text-align: center;
   font-family: "PT Sans", sans-serif;
-  font-style: normal;
+  font-style:normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-}
-
-.advantages-item-1 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.advantages-item-2 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.services-info {
-  padding: 64px auto;
-}
-
-.services-info-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  gap: 20px;
-  padding-top: 64px;
-  padding-bottom: 64px;
 }
+
+.advantages-item-picture {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
 
 .services-info-title {
   font-family: "PT Sans", sans-serif;
@@ -389,7 +355,8 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  margin: 0;
+  text-align: center;
+  margin: 64px 0 20px 0;
 }
 
 .sercices-description-info {
@@ -397,7 +364,9 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: rgba(51, 51, 51, 1);
+  text-align: center;
   margin: 0;
+  margin-bottom: 64px;
 }
 
 .services {
@@ -528,17 +497,19 @@ body {
   text-transform: uppercase;
   margin: 0;
   color: rgba(255, 255, 255, 1);
+  margin-bottom: 20px;
 }
 
 .subscription-description {
   font-family: "PT Sans", sans-serif;
-
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   margin: 0;
   color: rgba(255, 255, 255, 1);
+  margin-bottom: 54px;
+
 }
 
 .subscription-form-container {
@@ -1241,22 +1212,17 @@ button.button-reset:active {
 }
 
 .page-footer {
-  display: block;
-  padding: 40px 70px 30px 70px;
-}
-
-.page-footer-container {
   display: flex;
   flex-direction: row;
+  padding: 40px 70px 30px 70px;
   justify-content: space-between;
-  width: 1060px;
-  padding: 5px 0;
 }
-
-.footer-social-container {
-  display: grid;
-  grid-template-columns: 142px;
-  grid-template-rows: 40px;
+.footer-social {
+  display: flex;
+  align-items: center;
+  width: 142px;
+  height: 40px;
+  margin: 5px 0 5px 0;
 }
 
 .footer-social-list {
@@ -1266,6 +1232,7 @@ button.button-reset:active {
   margin: 0;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
+  width: 100%;
 }
 
 .footer-social-item {
@@ -1287,15 +1254,17 @@ button.button-reset:active {
 .footer-contacts {
   display: flex;
   padding: 0;
-  align-items: end;
+  align-items: center;
   justify-content: center;
+  line-height: 0;
+  margin: 5px 0 5px 0;
 }
 
 .footer-contacts-address-phone {
+  display: block;
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
   font-size: 40px;
-  text-align: end;
   text-transform: uppercase;
   padding: 0;
 }
@@ -1436,8 +1405,7 @@ button.button-reset:active {
   background-color: rgba(242, 242, 242, 1);
 }
 
-.quantity {
-}
+.quantity {}
 
 .quantity.input-item {
   width: 31px;
