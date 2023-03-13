@@ -141,7 +141,7 @@ body {
   font-weight: 700;
   font-size: 20px;
   color: rgb(0, 0, 0);
-  display: flex;
+  display: flex;Ехать в Седону из Лас-Вегаса совсем не скучно!
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -227,11 +227,11 @@ body {
 }
 
 .hero-block {
-  background-image: url(../images/index-background.jpg), url(../images/divider.svg);
-  background-size: 100% auto, 100% auto;
-  background-repeat: repeat-y, no-repeat;
+  position: relative;
+  background-image:url(../images/divider.svg), url(../images/index-background.jpg);
+  background-size: auto, auto;
+  background-repeat: no-repeat, no-repeat;
   background-position: bottom center;
-  display: flex;
   padding: 51px 371px 82px 371px;
 }
 
