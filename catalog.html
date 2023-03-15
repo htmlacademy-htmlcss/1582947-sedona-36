@@ -73,7 +73,7 @@
                 </a>
               </li>
               <li class="breadcrumbs-item">
-                <img src="./images/breadcrumbs-arrow-right.svg" width="6" height="10" alt="Стрелка вправо">
+                <img src="./images/breadcrumbs-arrow-right.svg" width="auto" height="auto" alt="Стрелка вправо">
               </li>
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="">Гостиницы</a>
@@ -86,49 +86,53 @@
               <div class="catalog-group-type">
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Инфраструктура:</legend>
-                  <div class="filter-catalog-container">
                     <ul class="catalog-filter-list">
                       <li class="catalog-filter-item">
-                        <label class="control">
+                        <label class="control-checkbox">
                           <input class="control-input" type="checkbox" name="swimming-pool" checked>
-                          Бассейн
+                          <span class="check-checkbox"></span>
+                          <span class="text-filter-checkbox">Бассейн</span>
                         </label>
                       </li>
                       <li class="catalog-filter-item">
-                        <label class="control">
+                        <label class="control-checkbox">
                           <input class="control-input" type="checkbox" name="parking" checked>
-                          Парковка
+                          <span class="check-checkbox"></span>
+                          <span class="text-filter-checkbox">Парковка</span>
                         </label>
                       </li>
                       <li class="catalog-filter-item">
-                        <label class="control">
-                          <input class="control-input" type="checkbox" name="wi-fi">
-                          WI-FI
+                        <label class="control-checkbox" for="checkbox-staus">
+                          <input class="control-input" type="checkbox" name="wi-fi" id="checkbox-staus">
+                          <span class="check-checkbox"></span>
+                          <span class="text-filter-checkbox">WI-FI</span>
                         </label>
                       </li>
                     </ul>
-                  </div>
                 </fieldset>
                 <!--Фильтр по селектам-->
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Тип жилья:</legend>
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="radio" name="product-group" checked>
-                        Гостиница
+                      <label class="control-radio">
+                        <input class="control-input" type="checkbox" name="hotel" checked>
+                        <span class="check-radio"></span>
+                        <span class="text-filter-radio">Гостиница</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="radio" name="product-group">
-                        Мотель
+                      <label class="control-radio">
+                        <input class="control-input" type="checkbox" name="motel">
+                        <span class="check-radio"></span>
+                        <span class="text-filter-radio">Мотель</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="radio" name="product-group">
-                        Апартаменты
+                      <label class="control-radio">
+                        <input class="control-input" type="checkbox" name="apartments">
+                        <span class="check-radio"></span>
+                        <span class="text-filter-radio">Апартаменты</span>
                       </label>
                     </li>
                   </ul>
@@ -148,7 +152,7 @@
                     </li>
                     <li class="value-price-item price-item-number ">
                       <label class="value-price-label price-label-number right">
-                        <input class="value-price-input price-input-number rigth" type="text" placeholder="9000">
+                        <input class="value-price-input price-input-number right" type="text" placeholder="9000">
                         <span class="value-price-text">до</span>
                       </label>
                     </li>
