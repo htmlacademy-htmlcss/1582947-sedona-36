@@ -72,8 +72,8 @@
                 страницу" width="12" height="12">
                 </a>
               </li>
-              <li class="breadcrumbs-item">
-                <img src="./images/breadcrumbs-arrow-right.svg" width="auto" height="auto" alt="Стрелка вправо">
+              <li class="breadcrumbs-item arrow-right">
+                <span class="breadcrumbs-arrow-right"></span>
               </li>
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="">Гостиницы</a>
@@ -86,29 +86,29 @@
               <div class="catalog-group-type">
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Инфраструктура:</legend>
-                    <ul class="catalog-filter-list">
-                      <li class="catalog-filter-item">
-                        <label class="control-checkbox">
-                          <input class="control-input" type="checkbox" name="swimming-pool" checked>
-                          <span class="check-checkbox"></span>
-                          <span class="text-filter-checkbox">Бассейн</span>
-                        </label>
-                      </li>
-                      <li class="catalog-filter-item">
-                        <label class="control-checkbox">
-                          <input class="control-input" type="checkbox" name="parking" checked>
-                          <span class="check-checkbox"></span>
-                          <span class="text-filter-checkbox">Парковка</span>
-                        </label>
-                      </li>
-                      <li class="catalog-filter-item">
-                        <label class="control-checkbox" for="checkbox-staus">
-                          <input class="control-input" type="checkbox" name="wi-fi" id="checkbox-staus">
-                          <span class="check-checkbox"></span>
-                          <span class="text-filter-checkbox">WI-FI</span>
-                        </label>
-                      </li>
-                    </ul>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control-checkbox">
+                        <input class="control-input" type="checkbox" name="swimming-pool" checked>
+                        <span class="check-checkbox"></span>
+                        <span class="text-filter-checkbox">Бассейн</span>
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control-checkbox">
+                        <input class="control-input" type="checkbox" name="parking" checked>
+                        <span class="check-checkbox"></span>
+                        <span class="text-filter-checkbox">Парковка</span>
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control-checkbox" for="checkbox-staus">
+                        <input class="control-input" type="checkbox" name="wi-fi" id="checkbox-staus">
+                        <span class="check-checkbox"></span>
+                        <span class="text-filter-checkbox">WI-FI</span>
+                      </label>
+                    </li>
+                  </ul>
                 </fieldset>
                 <!--Фильтр по селектам-->
                 <fieldset class="catalog-filter-group">
@@ -221,19 +221,15 @@
                 Resort & Spa" width="300" height="212">
                   <h3 class="product-card-title">Amara Resort & Spa</h3>
                 </a>
-                <ul class="product-card-info">
-                  <li>
-                    <p class="product-type">Гостиница</p>
-                  </li>
-                  <li>
-                    <p class="product-card-price">От 4000 ₽</p>
-                  </li>
-                </ul>
+                <div class="product-card-info">
+                  <p class="product-type">Гостиница</p>
+                  <p class="product-card-price">От 4000 ₽</p>
+                </div>
 
-                <ul class="button-card">
-                  <li class="button-card-item"><a class="button button-brown" href="#">Подробнее</a></li>
-                  <li class="button-card-item"><a class="button button-blue" href="#">В избранное</a></li>
-                </ul>
+                <div class="button-card">
+                  <button class="button-card-item"><a class="button button-brown" href="#">Подробнее</a></button>
+                  <button class="button-card-item"><a class="button button-blue" href="#">В избранное</a></button>
+                </div>
                 <div class="raiting-block">
                   <ul class="raiting-stars">
                     <li class="raiting-star">
@@ -249,6 +245,7 @@
                       <img src="./images/star-rating.svg" alt="Рейтинг" width="18" height="17">
                     </li>
                   </ul>
+                  <p class="raiting-stars"></p>
                   <p class="raiting-info">Рейтинг: 8,5</p>
                 </div>
               </li>
@@ -260,18 +257,14 @@
                     alt="Гостиница Villas atPoco Diablo" width="300" height="212">
                   <h3 class="product-card-title">Villas at Poco Diablo</h3>
                 </a>
-                <ul class="product-card-info">
-                  <li>
+                <div class="product-card-info">
                     <p class="product-type">Гостиница</p>
-                  </li>
-                  <li>
                     <p class="product-card-price">От 5000 ₽</p>
-                  </li>
-                </ul>
-                <ul class="button-card">
-                  <li class="button-card-item"><a class="button button-brown" href="#">Подробнее</a></li>
-                  <li class="button-card-item"><a class="button button-green" href="#">в избранном</a></li>
-                </ul>
+                  </div>
+                <div class="button-card">
+                  <button class="button-card-item"><a class="button button-brown" href="#">Подробнее</a></button>
+                  <button class="button-card-item"><a class="button button-green" href="#">в избранном</a></button>
+                </div>
                 <div class="raiting-block">
                   <ul class="raiting-stars">
                     <li class="raiting-star">
@@ -299,18 +292,14 @@
                     alt="Гостиница DesertQuail Inn" width="300" height="212">
                   <h3 class="product-card-title">Desert Quail Inn</h3>
                 </a>
-                <ul class="product-card-info">
-                  <li>
+                <div class="product-card-info">
                     <p class="product-type">Гостиница</p>
-                  </li>
-                  <li>
                     <p class="product-card-price">От 2500 ₽</p>
-                  </li>
-                </ul>
-                <ul class="button-card">
-                  <li class="button-card-item"><a class="button button-brown" href="#">Подробнее</a></li>
-                  <li class="button-card-item"><a class="button button-blue" href="#">В избранное</a></li>
-                </ul>
+                    </div>
+                <div class="button-card">
+                  <button class="button-card-item"><a class="button button-brown" href="#">Подробнее</a></button>
+                  <button class="button-card-item"><a class="button button-blue" href="#">В избранное</a></button>
+                </div>
                 <div class="raiting-block">
                   <ul class="raiting-stars">
                     <li class="raiting-star">
@@ -333,17 +322,13 @@
                     width="300" height="212">
                   <h3 class="product-card-title">GreenTree Inn</h3>
                 </a>
-                <ul class="product-card-info">
-                  <li>
+                <div class="product-card-info">
                     <p class="product-type">Гостиница</p>
-                  </li>
-                  <li>
                     <p class="product-card-price">От 1500 ₽</p>
-                  </li>
-                </ul>
+                </div>
                 <ul class="button-card">
-                  <li class="button-card-item"><a class="button button-brown" href="#">Подробнее</a></li>
-                  <li class="button-card-item"><a class="button button-blue" href="#">В избранное</a></li>
+                  <button class="button-card-item"><a class="button button-brown" href="#">Подробнее</a></button>
+                  <button class="button-card-item"><a class="button button-blue" href="#">В избранное</a></button>
                 </ul>
                 <div class="raiting-block">
                   <ul class="raiting-stars">

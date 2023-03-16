@@ -106,8 +106,7 @@ body {
 }
 
 .navigation-link-current {
-  border-bottom: 1px solid rgba(117, 98, 87, 1);
-  box-shadow: 0 1px 0 0 rgba(117, 98, 87, 1);
+  box-shadow: inset 0 -1px 0 0 rgba(117, 98, 87, 1), 0 1px 0 0 rgba(117, 98, 87, 1);
   z-index: 2;
 }
 
@@ -209,6 +208,14 @@ body {
   background-color: rgba(117, 97, 87, 1);
   color: rgba(255, 255, 255, 0.3);
 }
+
+.button.navigation-item-link-button:disabled,
+.button.button-all-hotel:disabled,
+.button.button-brown:disabled {
+  background: rgb(229, 229, 229);
+  color: rgb(255, 255, 255);
+}
+
 
 .button.navigation-item-link-button {
   display: block;
@@ -592,6 +599,14 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.button.subscription-button:disabled,
+.button.blue-submit:disabled,
+.button.button-blue:disabled {
+  background: rgb(229, 229, 229);
+  color: rgb(255, 255, 255);
+}
+
+
 input[type="email" i] {
   display: block;
   padding: 14px 0 14px 20px;
@@ -667,6 +682,13 @@ input[type="email" i] {
   margin-bottom: 40px;
 }
 
+.breadcrumbs-arrow-right {
+  display: block;
+  background: url(../images/breadcrumbs-arrow-right.svg);
+  width: 7px;
+  height: 10px;
+}
+
 .breadcrumbs-link {
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
@@ -718,9 +740,6 @@ input[type="email" i] {
   align-items: center;
   gap: 16px;
 }
-
-.check-checkbox,
-.check-radio {}
 
 .catalog-filter-group {
   display: block;
@@ -784,11 +803,31 @@ input[type="email" i] {
   gap: 16px;
 }
 
-.control-checkbox:hover,
-.control-radio:hover {
-  opacity: 0.3;
+
+.control-checkbox:hover .check-checkbox {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
+.control-checkbox:hover .text-filter-checkbox {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.control-checkbox:focus .check-checkbox {
+  border: 2px solid rgb(131, 179, 211);
+  border-radius: 4px;
+}
+
+.control-checkbox:focus .check-checkbox {
+  color: rgb(255, 255, 255);
+}
+
+.control-checkbox:active .check-checkbox {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-checkbox:active .text-filter-checkbox {
+  color: rgba(255, 255, 255, 0.3);
+}
 
 .control-input {
   display: none;
@@ -820,6 +859,32 @@ input[type="email" i] {
 .control-input:checked + .check-radio::before {
   opacity: 1;
 }
+
+.control-radio:hover .check-radio {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-radio:hover .text-filter-radio {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.control-radio:focus .check-radio {
+  border: 2px solid rgb(26, 1, 1);
+  border-radius: 50%;
+}
+
+.control-radio:focus .check-radio {
+  color: rgb(255, 255, 255);
+}
+
+.control-radio:active .check-radio {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.control-radio:active .text-filter-radio {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 
 .catalog-filter-group.price {
   display: flex;
@@ -975,6 +1040,14 @@ button.button-reset:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
+button.button-reset:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+button.button-reset:disabled {
+  color: rgba(255, 255, 255, 0.1);
+}
+
 .sort {
   display: flex;
   flex-direction: row;
@@ -1019,12 +1092,17 @@ button.button-reset:active {
   border-color: rgba(104, 162, 202, 1);
 }
 
-.select-control:hover {
+.select-control:focus {
   border-color: rgba(104, 162, 202, 1);
 }
 
-.select-control:hover {
-  border-color: rgba(104, 162, 202, 1);
+.select-control:active {
+  border-color: rgb(63, 94, 114);
+}
+
+.select-control:disabled {
+  border-color: rgba(0, 0, 0, 0.302);
+  color: rgba(0, 0, 0, 0.302);
 }
 
 .view-container {
@@ -1137,10 +1215,13 @@ button.button-reset:active {
   padding: 8px 18px;
   color: rgba(255, 255, 255, 1);
   text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
 }
 
 .button.button-green {
@@ -1149,6 +1230,8 @@ button.button-reset:active {
   padding: 8px 18px;
   color: rgba(255, 255, 255, 1);
   text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -1211,6 +1294,8 @@ button.button-reset:active {
 .button-card-item {
   margin: 0;
   padding: 0;
+  border: none;
+  background: none;
 }
 
 .raiting-block {
@@ -1229,6 +1314,10 @@ button.button-reset:active {
   padding: 0;
   gap: 8px;
 }
+
+
+
+
 
 .raiting-info {
   margin: 0;
@@ -1434,12 +1523,12 @@ button.button-reset:active {
 }
 
 
-.footer-htmlacademy:hover,
-.footer-logo-img:hover {
+.footer-htmlacademy:hover path,
+.footer-logo-img:hover path {
   fill: rgba(117, 97, 87, 1);
 }
 
-.footer-htmlacademy:focus {
+.footer-htmlacademy:focus path {
   fill: rgba(117, 97, 87, 1);
 }
 
@@ -1475,7 +1564,7 @@ button.button-reset:active {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 2;
   display: flex;
-  /* display: none; */
+  display: none;
 
 }
 
@@ -1521,7 +1610,6 @@ button.button-reset:active {
   border-radius: 50%;
   left: 613px;
   top: 64px;
-  outline: none;
   border: none;
 }
 
@@ -1531,25 +1619,27 @@ button.button-reset:active {
   width: 20px;
   height: 20px;
   left: 10px;
-  background: url(../images/cross.svg);
   background-repeat: no-repeat;
   z-index: 2;
   margin: 0;
   padding: 0;
 }
 
+
 .exit:hover {
-  box-shadow: 0 0 0 3px rgb(130, 179, 211);
+  background-color: rgb(230, 230, 230);
 }
 
 .exit:focus {
-  border: 3px solid #ffffff;
   box-shadow: 0 0 0 3px rgb(130, 179, 211);
 }
 
-.exit:active {
-  opacity: 0.3;
+.exit:active path {
+  background: rgb(230, 230, 230);
+  fill: rgba(0, 0, 0, 0.3);
 }
+
+
 
 .popup-list {
   list-style-type: none;
@@ -1624,6 +1714,12 @@ button.button-reset:active {
   padding: 14px 10px;
 }
 
+.count-page-container {
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
 .minus {
   display: block;
   position: relative;
@@ -1634,20 +1730,53 @@ button.button-reset:active {
   z-index: 2;
 }
 
-.minus:hover {
-  background: url(../images/minus-black.svg);
+.button-minus:hover path {
+  fill-opacity: 1;
+  fill: black;
 }
 
-.minus:focus {
-  background: url(../images/minus-black.svg);
+.button-plus:hover path {
+  fill-opacity: 1;
+  fill: black;
+}
+
+.button-minus:focus path {
+  fill-opacity: 1;
+  fill: black;
+}
+
+.button-minus:focus .minus {
   box-shadow: 0 0 0 3px rgb(130, 179, 211);
+  border-radius: 4px;
+  outline: none;
+}
+
+.button-minus:active path {
+  fill-opacity: 0.2;
+}
+
+.button-plus:hover path {
+  fill-opacity: 1;
+  fill: black;
+}
+
+.button-plus:focus .plus {
+  box-shadow: 0 0 0 3px rgb(130, 179, 211);
+  border-radius: 4px;
+  outline: none;
+}
+
+.button-plus:active path {
+  fill-opacity: 0.2;
+}
+
+.popup-item-adults {
   border-radius: 4px;
 }
 
-.minus:active {
-  background: url(../images/minus.svg);
+.popup-item-child {
+  border-radius: 4px;
 }
-
 
 .plus {
   display: block;
@@ -1658,21 +1787,6 @@ button.button-reset:active {
   background-repeat: no-repeat;
   z-index: 2;
 }
-
-.plus:hover {
-  background: url(../images/plus-black.svg);
-}
-
-.plus:focus {
-  background: url(../images/plus-black.svg);
-  box-shadow: 0 0 0 3px rgb(130, 179, 211);
-  border-radius: 4px;
-}
-
-.plus:active {
-  background: url(../images/plus.svg);
-}
-
 
 .quantity {
   width: 31px;

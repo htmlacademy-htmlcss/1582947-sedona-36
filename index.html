@@ -294,7 +294,14 @@
     <div class="modal-container">
       <div class="modal search-hotel-popup">
         <button class="exit">
-          <span class="exit-cross"></span>
+          <span class="exit-cross">
+            <svg class="close-icon" width="21" height="21" viewBox="0 0 21 21" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.4905 4.78288L16.1982 3.49057L10.4905 9.19826L4.78279 3.49057L3.49048 4.78288L9.19817 10.4906L3.49048 16.1983L4.78279 17.4906L10.4905 11.7829L16.1982 17.4906L17.4905 16.1983L11.7828 10.4906L17.4905 4.78288Z"
+                fill="black" />
+            </svg>
+          </span>
         </button>
         <form class="search-hotel-form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="popup-fieldset">
@@ -302,35 +309,55 @@
             <ul class="popup-list">
               <li class="popup-item">
                 <label for="arrival-date popup-item-title" class="popup-item-title">Дата заезда</label>
-                <input class="input-item arrival-date-item" type="text" value="27 апреля 2020" id="arrival-date" name="arrival-date" required>
+                <input class="input-item arrival-date-item" type="text" value="27 апреля 2020" id="arrival-date"
+                  name="arrival-date" required>
               </li>
               <li class="popup-item">
                 <label for="departure-date" class="popup-item-title">Дата выезда:</label>
-                <input class="input-item departure-date-item" type="text" value="1 сентября 2023" id="departure-date" name="departure-date" required>
+                <input class="input-item departure-date-item" type="text" value="1 сентября 2023" id="departure-date"
+                  name="departure-date" required>
               </li>
               <li class="popup-item age">
                 <label for="input-item  " class="popup-item-title">Взрослые:</label>
                 <div class="popup-item-adults">
-                  <div class="count-page-container button-minus">
-                    <div class="count minus"></div>
-                  </div>
-                  <input type="text" class="quantity" value="2" data-max-count="20" id="quantity-adults" name="quantity-adults" required>
-                  <div class="count-page-container button-plus">
-                    <div class="count plus"></div>
-                  </div>
+                  <button class="count-page-container button-minus">
+                    <div class="count minus">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3" />
+                      </svg>
+                    </div>
+                  </button>
+                  <input type="text" class="quantity" value="2" data-max-count="20" id="quantity-adults"
+                    name="quantity-adults" required>
+                  <button class="count-page-container button-plus">
+                    <div class="count plus"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3" />
+                      </svg>
+                    </div>
+                  </button>
                 </div>
                 <label for="quantity-child" class="popup-item-title">Дети:</label>
                 <div class="explanation">
                   <p class="explanation-text">i</p>
                 </div>
                 <div class="popup-item-child">
-                  <div class="count-page-container button-minus">
-                    <div class="count minus"></div>
-                  </div>
-                  <input for="quantity-child" type="text" class="quantity" value="2" data-max-count="20" name="quantity-child">
-                  <div class="count-page-container button-plus">
-                    <div class="count plus"></div>
-                  </div>
+                  <button class="count-page-container button-minus">
+                    <div class="count minus">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3" />
+                      </svg>
+                    </div>
+                  </button>
+                  <input for="quantity-child" type="text" class="quantity" value="2" data-max-count="20"
+                    name="quantity-child">
+                  <button class="count-page-container button-plus">
+                    <div class="count plus"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3" />
+                      </svg>
+                    </div>
+                  </button>
                 </div>
               </li>
             </ul>
