@@ -115,7 +115,7 @@ body {
   grid-template-columns: auto auto auto;
   align-items: center;
   margin: 0;
-  gap: 26px;
+  gap: 24px;
   padding: 0;
 }
 
@@ -149,6 +149,7 @@ body {
   position: relative;
 }
 
+
 .favorites-count {
   display: block;
   position: absolute;
@@ -160,8 +161,8 @@ body {
   min-width: 20px;
   width: 20px;
   height: 20px;
-  top: 32%;
-  left: 99%;
+  top: 33%;
+  left: 18px;
   transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 1);
   text-align: center;
@@ -174,6 +175,8 @@ body {
   align-items: center;
   padding: 22px 0;
 }
+
+
 
 .button {
   background: rgba(117, 97, 87, 1);
@@ -1532,7 +1535,7 @@ button.button-reset:disabled {
   fill: rgba(117, 97, 87, 1);
 }
 
-.footer-htmlacademy:active {
+.footer-htmlacademy:active path{
   fill: rgba(117, 97, 87, 0.3);
 }
 
@@ -1551,9 +1554,7 @@ button.button-reset:disabled {
   justify-content: center;
 }
 
-.footer-logo-img:hover {
-  color: rgba(117, 97, 87, 1);
-}
+
 
 .modal-container {
   position: fixed;
