@@ -289,6 +289,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgb(255, 255, 255);
 }
 
 .advantages-item {
@@ -424,11 +425,13 @@ body {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  background-color: rgb(255, 255, 255);
 }
 
 .services-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 385px;
   padding: 0;
   margin: 0;
   align-items: flex-start;
@@ -439,7 +442,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 81px 85px;
   height: 100%;
 }
@@ -486,6 +489,7 @@ body {
 
 .home::before {
   background-image: url(../images/home.svg);
+  top: 20px;
   width: 72px;
   height: 75px;
   margin: 0 auto 30px auto;
@@ -501,6 +505,7 @@ body {
 
 .souvenirs::before {
   background-image: url(../images/box.svg);
+  position: relative;
   width: 64px;
   height: 76px;
   margin: 0 auto 30px auto;
@@ -524,6 +529,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 96px 304px;
+  background-color: rgb(255, 255, 255);
 }
 
 .appointment-text-container {
@@ -868,7 +874,7 @@ input[type="email" i] {
 }
 
 .control-checkbox:focus .check-checkbox {
-  border: 2px solid rgb(131, 179, 211);
+  box-shadow: 0 0 0 3px rgb(131, 179, 211);
   border-radius: 4px;
 }
 
@@ -878,6 +884,8 @@ input[type="email" i] {
 
 .control-checkbox:active .check-checkbox {
   background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 2px rgb(131, 179, 211);
+
 }
 
 .control-checkbox:active .text-filter-checkbox {
@@ -924,7 +932,7 @@ input[type="email" i] {
 }
 
 .control-radio:focus .check-radio {
-  border: 2px solid rgb(26, 1, 1);
+  box-shadow: 0 0 0 3px rgb(131, 179, 211);
   border-radius: 50%;
 }
 
@@ -934,6 +942,7 @@ input[type="email" i] {
 
 .control-radio:active .check-radio {
   background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 2px rgb(131, 179, 211);
 }
 
 .control-radio:active .text-filter-radio {
@@ -950,6 +959,46 @@ input[type="email" i] {
   display: flex;
   gap: 70px;
   align-items: flex-start;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  margin-bottom: 0;
+  background-color: #FFFFFF30;
+  border-radius: 2px;
+  bottom: -2px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  right: 0;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
 }
 
 .range-price-list {
@@ -979,38 +1028,44 @@ input[type="email" i] {
   padding: 0;
   margin: 0;
   line-height: 0;
+
 }
 
 .value-price-label {
+  overflow: hidden;
   display: flex;
 }
 
+.value-price-text {
+  background-color: rgb(242, 242, 242);
+}
 
-
-.value-price-label.price-label-number {
-  background-color: rgba(255, 255, 255, 1);
-  overflow: hidden;
-  display: flex;
+.value-price-input.price-input-number {
+  background-color: rgb(242, 242, 242);
 }
 
 .value-price-input.price-input-number.left {
   border: none;
   outline: none;
   font-family: "PT Sans", sans-serif;
-
 }
 
 .value-price-input.price-input-number.right {
   border: none;
   outline: none;
   font-family: "PT Sans", sans-serif;
-
 }
 
-.value-price-label.price-label-number.right:focus {
-  border: 3px solid rgba(131, 179, 211, 1);
+.value-price-text {
+  position: relative;
+  color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  padding: 12px 19px;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
 }
-
 
 
 .price-label-number.left {
@@ -1036,12 +1091,28 @@ input[type="email" i] {
   line-height: 24px;
 }
 
-.value-price-text {
-  color: rgba(229, 229, 229, 1);
-  display: flex;
-  align-items: center;
-  padding: 12px 19px;
+.value-price-label:hover .value-price-input {
+  background-color: #E6E6E6;
 }
+
+.value-price-label:hover .value-price-text {
+  background-color: #E6E6E6;
+}
+
+.value-price-label:focus {
+  background-color: #E6E6E6;
+  box-shadow: 0 0 0 2px rgb(131, 179, 211);
+}
+
+.value-price-label:active {
+  background-color: #E6E6E6;
+  box-shadow: 0 0 0 2px rgb(0, 0, 0);
+}
+.value-price-label:focus-within {
+  box-shadow: 0 0 0 2px rgb(0, 0, 0);
+}
+
+
 
 .button-submit-filter {
   list-style-type: none;
@@ -1229,9 +1300,7 @@ input[type="email" i] {
   min-width: 1200px;
 }
 
-.card-list::after {
-
-}
+.card-list::after {}
 
 .product-list {
   display: grid;
@@ -1428,11 +1497,9 @@ input[type="email" i] {
   gap: 8px;
 }
 
-.pagination-item.current {
-  background: rgba(242, 242, 242, 1);
-}
 
-.pagination-item:nth-child(5) {
+
+.pagination-item:nth-child(5){
   width: 60px;
   height: 60px;
   background: rgb(255, 255, 255);
@@ -1445,17 +1512,14 @@ input[type="email" i] {
 
 .pagination-item:nth-child(5) .pagination-link {
   color: rgb(0, 0, 0);
-  background: rgba(242, 242, 242, 1);
+  background: rgb(255, 255, 255);
 }
 
 .pagination-item {
-  width: 60px;
-  height: 60px;
-  background: rgba(130, 179, 211, 1);
-  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: none;
 }
 
 .pagination-link.pagination-current {
@@ -1463,36 +1527,52 @@ input[type="email" i] {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
   text-decoration: none;
 }
 
 .pagination-link {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  padding: 20px 0;
+  text-align: center;
+  background: rgba(130, 179, 211, 1);
   color: rgba(255, 255, 255, 1);
   font-family: "PT Sans", sans-serif;
-
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 0;
+  line-height: 20px;
   text-decoration: none;
   display: block;
 }
 
-.pagination-item:hover {
+.pagination-current {
+  background-color: rgb(242, 242, 242);
+}
+
+.pagination-link:hover {
   background-color: rgba(104, 162, 202, 1);
 }
 
-.pagination-item:focus {
+.pagination-link:focus {
   background-color: rgba(104, 162, 202, 1);
 }
 
-.pagination-item:active,
-.pagination-item.pagination-link:active {
+.pagination-link:active,
+.pagination-link:active .pagination-link {
   background-color: rgba(130, 179, 211, 1);
   color: rgba(255, 255, 255, 0.3);
 }
+
+.pagination-current:hover,
+.pagination-current:focus,
+.pagination-current:active {
+  background: rgba(242, 242, 242, 1);
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+}
+
 
 .subscription-catalog {
   text-align: center;
@@ -1636,8 +1716,6 @@ input[type="email" i] {
   justify-content: center;
 }
 
-
-
 .modal-container {
   position: fixed;
   top: 0;
@@ -1650,7 +1728,7 @@ input[type="email" i] {
 }
 
 .open-modal {
-  display: flex;
+  /* display: flex; */
 }
 
 .modal {
@@ -1770,52 +1848,50 @@ input[type="email" i] {
   border: none;
   outline: none;
   margin: 0;
-  padding: 0;
+  padding: 12px 20px;
+  width: 100%;
+  border-radius: 4px;
 }
 
 .input-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  position: relative;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  padding: 12px 20px;
   background-color: rgba(242, 242, 242, 1);
   border-radius: 4px;
   border: none;
   width: 440px;
 }
 
-.input-container:hover .input-item {
+.input-item:hover {
   color: rgb(0, 0, 0, 0.6);
-}
-
-.input-container:hover {
   background: rgb(230, 230, 230);
 }
 
-.input-container:hover button{
-  background: rgb(230, 230, 230);
+.input-item:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
 }
 
-.input-container:focus {
-  border: 3px solid #83B3D3;
-}
+.input-item:active {
+  box-shadow: 0 0 0 2px rgb(0, 0, 0);
 
-.input-container:active {
-  border: 2px solid #000000;
+
 }
 
 
 .calendar-icon {
+  position: absolute;
   outline: none;
   border: none;
   margin: 0;
   padding: 0;
   line-height: 0;
   margin-right: 2px;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 .calendar-icon path {

@@ -127,22 +127,22 @@
                   <legend class="catalog-filter-title">Тип жилья:</legend>
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
-                      <label class="control-radio">
-                        <input class="control-input" type="checkbox" name="hotel" checked>
+                      <label class="control-radio" for="hotel">
+                        <input class="control-input" type="checkbox" name="hotel" id="hotel" checked>
                         <span class="check-radio"></span>
                         <span class="text-filter-radio">Гостиница</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
-                      <label class="control-radio">
-                        <input class="control-input" type="checkbox" name="motel">
+                      <label class="control-radio" for="motel">
+                        <input class="control-input" type="checkbox" name="motel" id="motel">
                         <span class="check-radio"></span>
                         <span class="text-filter-radio">Мотель</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
-                      <label class="control-radio">
-                        <input class="control-input" type="checkbox" name="apartments">
+                      <label class="control-radio" for="apartments">
+                        <input class="control-input" type="checkbox" name="apartments" id="apartments">
                         <span class="check-radio"></span>
                         <span class="text-filter-radio">Апартаменты</span>
                       </label>
@@ -157,21 +157,30 @@
                   <ul class="value-price-list">
                     <li class="value-price-item price-item-number">
                       <!--Необходимо понять как еще засунуть сюда от и до-->
-                      <label class="value-price-label price-label-number left">
-                        <input class="value-price-input price-input-number left" type="text" placeholder="0">
+                      <label class="value-price-label price-label-number left" for="form">
+                        <input class="value-price-input price-input-number left" type="text" placeholder="0" value="0" name="from" id="form">
                         <span class="value-price-text">от</span>
                       </label>
                     </li>
                     <li class="value-price-item price-item-number ">
-                      <label class="value-price-label price-label-number right">
-                        <input class="value-price-input price-input-number right" type="text" placeholder="9000">
+                      <label class="value-price-label price-label-number right" for="to">
+                        <input class="value-price-input price-input-number right" type="text" placeholder="9000" value="9000" name="to" id="to">
                         <span class="value-price-text">до</span>
                       </label>
                     </li>
                     <li class="value-price-item range">
-                      <label class="value-price-label">
-                        <input class="value-price-input range" type="range" min="0" max="9000" step="1" value="6000">
-                      </label>
+                      <div class="range">
+                        <div class="range-scale">
+                          <div class="range-bar" style="left: 0; width: 227px">
+                            <button class="range-toggle toggle-min">
+                              <span class="visually-hidden">Изменить минимальную цену.</span>
+                            </button>
+                            <button class="range-toggle toggle-max">
+                              <span class="visually-hidden">Изменить максимальную цену.</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                   </ul>
 
@@ -373,10 +382,11 @@
             честное бойскаутское!
           </p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label for="subscription-email"><span class="visually-hidden">Форма подписки</span></label>
             <input class="email" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email"
               required>
             <button class="button-link subscription-button" type="submit">
-              Подписаться <span class="visually-hidden">Подписаться</span>
+              Подписаться <span class="visually-hidden">Подписаться.</span>
             </button>
           </form>
         </section>
