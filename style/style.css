@@ -1229,6 +1229,10 @@ input[type="email" i] {
   min-width: 1200px;
 }
 
+.card-list::after {
+
+}
+
 .product-list {
   display: grid;
   grid-template-columns: 340px 340px 340px;
@@ -1641,10 +1645,12 @@ input[type="email" i] {
   width: 100%;
   height: 100%;
   background-color: rgb(242, 242, 242, 0.8);
-  ;
   z-index: 2;
+  display: none;
+}
+
+.open-modal {
   display: flex;
-  /* display: none; */
 }
 
 .modal {
@@ -1760,7 +1766,7 @@ input[type="email" i] {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  background-color: rgba(242, 242, 242, 1);
+  background-color: transparent;
   border: none;
   outline: none;
   margin: 0;
@@ -1779,21 +1785,27 @@ input[type="email" i] {
   background-color: rgba(242, 242, 242, 1);
   border-radius: 4px;
   border: none;
-  outline: none;
   width: 440px;
 }
 
-.input-container:hover+.input-item {
-  background: rgb(230, 230, 230);
-  color: #AF7842;
+.input-container:hover .input-item {
+  color: rgb(0, 0, 0, 0.6);
 }
-.input-container:focus + .input-item{
+
+.input-container:hover {
+  background: rgb(230, 230, 230);
+}
+
+.input-container:hover button{
+  background: rgb(230, 230, 230);
+}
+
+.input-container:focus {
   border: 3px solid #83B3D3;
 }
 
-.input-container:active + .input-item{
+.input-container:active {
   border: 2px solid #000000;
-
 }
 
 
@@ -1822,7 +1834,6 @@ input[type="email" i] {
 
 .warning-arrival {
   position: relative;
-  display: block;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1832,6 +1843,7 @@ input[type="email" i] {
   margin: 0;
   padding: 0;
   color: hwb(0 34% 0%);
+  display: none;
 }
 
 .warning-departure {
@@ -1846,6 +1858,10 @@ input[type="email" i] {
   margin: 0;
   padding: 0;
   color: rgb(51, 51, 51);
+}
+
+.open-warning {
+  display: block;
 }
 
 .popup-item-title.child-item {
