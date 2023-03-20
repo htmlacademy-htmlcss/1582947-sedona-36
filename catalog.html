@@ -30,7 +30,7 @@
             </li>
             <!--Переход в каталог гостиниц-->
             <li class="navigation-item navigation-link-current">
-              <a class="navigation-link " href="./catalog.html">Гостиницы</a>
+              <a class="navigation-link " href="#">Гостиницы</a>
             </li>
           </ul>
           <!--Поиск-->
@@ -75,14 +75,7 @@
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link" href="./index.html">
-                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z"
-                      fill="white" />
-                    <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z" fill="white" />
-                  </svg>
-                </a>
+                <a class="breadcrumbs-link home-page" href="./index.html"></a>
               </li>
               <li class="breadcrumbs-item arrow-right">
                 <span class="breadcrumbs-arrow-right"></span>
@@ -100,15 +93,14 @@
                   <legend class="catalog-filter-title">Инфраструктура:</legend>
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
-                      <label class="control-checkbox">
-                        <input class="control-input" type="checkbox" name="swimming-pool" checked>
+                      <label for="swimming-pool">
+                      <input class="control-input" type="checkbox" name="swimming-pool" id="swimming-pool" checked>
                         <span class="check-checkbox"></span>
                         <span class="text-filter-checkbox">Бассейн</span>
-                      </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control-checkbox">
-                        <input class="control-input" type="checkbox" name="parking" checked>
+                        <input class="control-input" type="checkbox" name="parking" id="parking" checked>
                         <span class="check-checkbox"></span>
                         <span class="text-filter-checkbox">Парковка</span>
                       </label>
@@ -116,7 +108,7 @@
                     <li class="catalog-filter-item">
                       <label class="control-checkbox" for="checkbox-staus">
                         <input class="control-input" type="checkbox" name="wi-fi" id="checkbox-staus">
-                        <span class="check-checkbox"></span>
+                            <span class="check-checkbox"></span>
                         <span class="text-filter-checkbox">WI-FI</span>
                       </label>
                     </li>
@@ -158,13 +150,15 @@
                     <li class="value-price-item price-item-number">
                       <!--Необходимо понять как еще засунуть сюда от и до-->
                       <label class="value-price-label price-label-number left" for="form">
-                        <input class="value-price-input price-input-number left" type="text" placeholder="0" value="0" name="from" id="form">
+                        <input class="value-price-input price-input-number left" type="text" placeholder="0" value="0"
+                          name="from" id="form">
                         <span class="value-price-text">от</span>
                       </label>
                     </li>
                     <li class="value-price-item price-item-number ">
                       <label class="value-price-label price-label-number right" for="to">
-                        <input class="value-price-input price-input-number right" type="text" placeholder="9000" value="9000" name="to" id="to">
+                        <input class="value-price-input price-input-number right" type="text" placeholder="9000"
+                          value="9000" name="to" id="to">
                         <span class="value-price-text">до</span>
                       </label>
                     </li>
@@ -340,8 +334,8 @@
                   <div class="button-card">
                     <a class="button-link button-brown" href="#">Подробнее</a>
                     <a class="button-link button-blue" href="#">В
-                        избранное</a>
-                    </div>
+                      избранное</a>
+                  </div>
                   <div class="raiting-block">
                     <p class="stars stars-2"></p>
                     <p class="raiting-info">Рейтинг: 5,0</p>

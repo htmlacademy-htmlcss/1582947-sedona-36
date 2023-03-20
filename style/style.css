@@ -177,7 +177,19 @@ body {
   padding: 22px 0;
 }
 
+.navigation-link:hover {
+  color: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 -1px 0 0 rgba(117, 98, 87, 1), 0 1px 0 0 rgba(117, 98, 87, 1);
+}
 
+.navigation-link:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.navigation-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
 
 .button-link {
   background: rgba(117, 97, 87, 1);
@@ -204,6 +216,7 @@ body {
   text-transform: uppercase;
   padding: 8px 34px;
   margin-left: 9px;
+  outline: none;
 }
 
 .button-link.navigation-item-link-button:hover,
@@ -686,6 +699,10 @@ input[type="email" i] {
   width: 100%;
 }
 
+.email:hover {
+  background-color: ;
+}
+
 .inner-header {
   display: flex;
   background-repeat: no-repeat;
@@ -742,6 +759,31 @@ input[type="email" i] {
   margin: 0;
   margin-bottom: 40px;
 }
+
+.home-page {
+  display: block;
+  color: #242424;
+  background-image: url(../images/home.svg);
+  width: 13px;
+  height: 15px;
+  z-index: 2;
+}
+
+.home-page:hover {
+  opacity: 0.5;
+}
+
+.home-page:focus {
+  box-shadow: 0 0 0 3px rgb(131, 179, 211);
+  outline: none;
+  border-radius: 4px;
+}
+
+.home-page:focus {
+  opacity: 0.2;
+
+}
+
 
 .breadcrumbs-arrow-right {
   display: block;
@@ -822,11 +864,6 @@ input[type="email" i] {
   padding: 0;
 }
 
-.control-input {
-  display: none;
-
-}
-
 .check-checkbox {
   display: inline-block;
   width: 20px;
@@ -883,17 +920,16 @@ input[type="email" i] {
 }
 
 .control-checkbox:active .check-checkbox {
-  background-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 0 2px rgb(131, 179, 211);
 
 }
 
 .control-checkbox:active .text-filter-checkbox {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.1);
 }
 
 .control-input {
-  display: none;
+  display: ;
 }
 
 .check-radio {
@@ -931,7 +967,7 @@ input[type="email" i] {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.control-radio:focus .check-radio {
+.catalog-filter-item .control-radio:focus .check-radio {
   box-shadow: 0 0 0 3px rgb(131, 179, 211);
   border-radius: 50%;
 }
@@ -946,7 +982,7 @@ input[type="email" i] {
 }
 
 .control-radio:active .text-filter-radio {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -1023,7 +1059,7 @@ input[type="email" i] {
   grid-column-end: 3;
 }
 
-.value-price-item.price-item-number {
+.value-price-item {
   display: block;
   padding: 0;
   margin: 0;
@@ -1034,26 +1070,19 @@ input[type="email" i] {
 .value-price-label {
   overflow: hidden;
   display: flex;
+  background-color: rgba(242, 242, 242, 1);
 }
 
 .value-price-text {
-  background-color: rgb(242, 242, 242);
+  background-color: transparent;
 }
 
-.value-price-input.price-input-number {
-  background-color: rgb(242, 242, 242);
-}
 
-.value-price-input.price-input-number.left {
+.value-price-input {
   border: none;
   outline: none;
   font-family: "PT Sans", sans-serif;
-}
-
-.value-price-input.price-input-number.right {
-  border: none;
-  outline: none;
-  font-family: "PT Sans", sans-serif;
+  background-color: transparent;
 }
 
 .value-price-text {
@@ -1066,7 +1095,6 @@ input[type="email" i] {
   font-size: 18px;
   line-height: 24px;
 }
-
 
 .price-label-number.left {
   border-radius: 4px 0 0 4px;
@@ -1091,26 +1119,10 @@ input[type="email" i] {
   line-height: 24px;
 }
 
-.value-price-label:hover .value-price-input {
-  background-color: #E6E6E6;
-}
 
-.value-price-label:hover .value-price-text {
-  background-color: #E6E6E6;
-}
-
-.value-price-label:focus {
-  background-color: #E6E6E6;
-  box-shadow: 0 0 0 2px rgb(131, 179, 211);
-}
-
-.value-price-label:active {
-  background-color: #E6E6E6;
+/* .value-price-label:focus-within {
   box-shadow: 0 0 0 2px rgb(0, 0, 0);
-}
-.value-price-label:focus-within {
-  box-shadow: 0 0 0 2px rgb(0, 0, 0);
-}
+} */
 
 
 
@@ -1222,19 +1234,22 @@ input[type="email" i] {
 }
 
 .select-control:hover {
-  border-color: rgba(104, 162, 202, 1);
+  box-shadow: 0 0 0 2px rgb(104, 162, 202);
+  z-index: 2;
 }
 
 .select-control:focus {
-  border-color: rgba(104, 162, 202, 1);
+  box-shadow: 0 0 0 2px rgb(104, 162, 202);
+  z-index: 2;
 }
 
 .select-control:active {
-  border-color: rgb(63, 94, 114);
+  box-shadow: 0 0 0 2px rgb(63, 94, 114);
+  z-index: 2;
 }
 
 .select-control:disabled {
-  border-color: rgba(0, 0, 0, 0.302);
+  box-shadow: 0 0 0 3px rgb(63, 94, 114);
   color: rgba(0, 0, 0, 0.302);
 }
 
@@ -1499,7 +1514,7 @@ input[type="email" i] {
 
 
 
-.pagination-item:nth-child(5){
+.pagination-item:nth-child(5) {
   width: 60px;
   height: 60px;
   background: rgb(255, 255, 255);
@@ -1876,7 +1891,6 @@ input[type="email" i] {
 
 .input-item:active {
   box-shadow: 0 0 0 2px rgb(0, 0, 0);
-
 
 }
 
